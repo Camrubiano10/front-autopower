@@ -10,9 +10,9 @@ export default function SlideQuestions() {
 
         <div className="bg-white border-1px w-full pl-5 flex items-center md:justify-center h-16 md:h-14">
           <h2 className="text-xs md:text-lg font-semibold text-left md:text-center">
-            ¿El Sistema de software instalado puede
+          ¿El seguro para autos eléctricos es más caro ? 
             <br />
-            apagar el vehículo en caso de robo?
+          que para vehículos tradicionales?
           </h2>
         </div>
 
@@ -23,9 +23,11 @@ export default function SlideQuestions() {
         <div className="bg-white overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-40">
           <div className="p-3">
             <p className="text-xs md:text-lg">
-              Sí, el sistema de robo puede frustrar un robo en acción ya que la
-              tecnología instalada nos permite apagar el motor en vivo lass 24hr
-              y, además podremos ver la ubicación del vehículo.
+            Las tarifas pueden depender de varios
+            factores, incluyendo la seguridad del modelo y la disponibilidad de piezas.
+            tecnología instalada nos permite apagar el motor en vivo lass 24hr
+            Algunas aseguradoras ofrecen descuentos por la tecnología avanzada y 
+            características de seguridad.
             </p>
           </div>
         </div>
@@ -39,7 +41,7 @@ export default function SlideQuestions() {
 
         <div className="bg-white border-1px w-full pl-5 flex items-center md:justify-center h-16 md:h-14">
           <h2 className="text-xs md:text-lg font-semibold text-left md:text-center">
-            ¿Qué pasa si decido salir del país?
+            ¿La poliza tiene proteccion a intentos de hurto?
           </h2>
         </div>
 
@@ -51,8 +53,8 @@ export default function SlideQuestions() {
           <div className="p-3">
             <p className="text-xs md:text-lg">
               Sí, el sistema de robo puede frustrar un robo en acción ya que la
-              tecnología instalada nos permite apagar el motor en vivo lass 24hr
-              y, además podremos ver la ubicación del vehículo.
+              tecnología instalada nos permite apagar el motor en vivo las 24hr
+              y, además podremos ver la ubicación del vehículo en tiempo real.
             </p>
           </div>
         </div>
@@ -66,9 +68,9 @@ export default function SlideQuestions() {
 
         <div className="bg-white border-1px w-full pl-5 flex items-center md:justify-center h-16 md:h-14">
           <h2 className="text-xs md:text-lg font-semibold text-left md:text-center">
-            ¿El Sistema de software instalado puede
-            <br />
-            apagar el vehículo en caso de robo?
+          ¿Ofrecen descuentos especiales para propietarios 
+          <br />
+          de autos eléctricos?
           </h2>
         </div>
 
@@ -79,9 +81,10 @@ export default function SlideQuestions() {
         <div className="bg-white overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-40">
           <div className="p-3">
             <p className="text-xs md:text-lg">
-              Sí, el sistema de robo puede frustrar un robo en acción ya que la
-              tecnología instalada nos permite apagar el motor en vivo lass 24hr
-              y, además podremos ver la ubicación del vehículo.
+            Reconocemos la elección sostenible y ofrecemos descuentos exclusivos,
+            así como programas de recompensas por prácticas de conducción ecológica.
+            Nuestra meta es apoyar a los propietarios de autos eléctricos en su camino
+            hacia un futuro más verde.
             </p>
           </div>
         </div>

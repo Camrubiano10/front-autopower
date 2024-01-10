@@ -2,10 +2,16 @@
 import TextFaild from '../TextField';
 import FormWindow from '../FormWindow'
 import Button from '../Button';
-
+import { useNavigate } from 'react-router-dom';
 
 
 export default function ContainerLogin() {
+
+const navigate= useNavigate()
+    const handleButtonClick= ()=>{
+    // localStorage.setItem('plan_seleccionado', JSON.stringify({ plan: 'Basico', precio: 10 }))
+    navigate("/Profile")
+      }
 
     return (
 
@@ -52,6 +58,7 @@ export default function ContainerLogin() {
                 text="Buscar"
                 variant="primary"
                 disabled={false}
+                handleButtonClick={handleButtonClick}
                 />
             </div>
 

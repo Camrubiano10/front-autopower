@@ -1,12 +1,14 @@
 /* eslint-disable react/prop-types */
-import 'react-credit-cards-2/dist/es/styles-compiled.css'
+// import 'react-credit-cards-2/dist/es/styles-compiled.css'
 import FormWindow from '../FormWindow';
 import { initMercadoPago, CardPayment } from '@mercadopago/sdk-react';
 
 
 initMercadoPago(import.meta.env.VITE_MERCADOPAGO_PUBLIC_KEY)
 
-export default function ConatinerData({setActiveStep}) {
+console.log(initMercadoPago)
+
+export default function ContainerData({setActiveStep}) {
 
     const initialization = {
         amount: 500,

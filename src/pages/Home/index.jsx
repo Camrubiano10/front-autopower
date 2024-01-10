@@ -25,7 +25,7 @@ export default function Home() {
         <Hero pryceForm={pryceForm}/>
         <section className="mt-6 md:mt-24 w-[70%] m-auto">
           <h2 className="text-lg lg:text-4xl text-center my-3 font-bold tracking-wider">
-            Conoce nuestros planes de seguro vehicular
+            Conoce nuestros planes mensuales de seguro vehicular
           </h2>
           <div className="md:flex mt-8 md:mt-16 gap-12 ">
             <ContainerPriceBasic pryceForm={pryceForm}/>
