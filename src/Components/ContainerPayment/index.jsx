@@ -17,7 +17,7 @@ export default function ContainerData({setActiveStep}) {
     const handleFormSubmit = (formData) => {
         console.log(formData);
         setActiveStep(3);
-      };
+    };
 
 
 
