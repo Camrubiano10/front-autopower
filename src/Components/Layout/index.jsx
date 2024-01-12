@@ -1,5 +1,6 @@
 import logo from "../../assets/logo/logo-blanco.svg";
 import isotipo from "../../assets/logo/isotipo.svg";
+import user from "../../assets/icons/user.svg";
 import { Link, Outlet } from "react-router-dom";
 export default function Layout() {
   return (
@@ -22,9 +23,9 @@ export default function Layout() {
             <Link to="/Contact">
               <li className="hover:bg-darkblue-select py-4 px-6">CONTACTO</li>
             </Link>
-            <Link to="/Profile">
-              <li className="hover:bg-darkblue-select py-4 px-6">ACCESO</li>
-            </Link>
+            <Link to="/login">
+            <img className="w-8 ml-5 hover:scale-125 " src={user} />
+          </Link>
           </ul>
           <button className="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-gary-200 group">
             <div className="w-6 h-0.5 bg-white mb-1"></div>
