@@ -2,7 +2,7 @@ import { BenefitCard, HeroBenefit, TableBenefit } from "../../Components";
 export default function Benefits() {
   return (
     <>
-      <div className="">
+      <div className="mt-14">
         <HeroBenefit />
       </div>
       <section className=" bg-white">

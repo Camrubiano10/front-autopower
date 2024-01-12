@@ -4,7 +4,7 @@ import { Link, Outlet } from "react-router-dom";
 export default function Layout() {
   return (
     <>
-      <nav className="top-0 left-0  w-full shadow z-30   bg-gradient-to-r from-indigo-800 to-cyan-400
+      <nav className="fixed top-0 left-0  w-full shadow z-30   bg-gradient-to-r from-indigo-800 to-cyan-400
       ">
         <div className="container m-auto flex justify-between items-center tracking-wide text-white">
           <Link to="/">
@@ -22,7 +22,7 @@ export default function Layout() {
             <Link to="/Contact">
               <li className="hover:bg-darkblue-select py-4 px-6">CONTACTO</li>
             </Link>
-            <Link to="/Contact">
+            <Link to="/Profile">
               <li className="hover:bg-darkblue-select py-4 px-6">ACCESO</li>
             </Link>
           </ul>

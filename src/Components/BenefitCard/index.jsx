@@ -17,7 +17,7 @@ export default function BenefitCard() {
                 <img src={moneyBag} alt="" />
               </div>
               <h6 className="text-xl font-semibold">Ahorro</h6>
-              <p className="mt-2 mb-4 ">
+              <p className="my-2 ">
                 Nuestra póliza de seguro reconoce el ahorro y te recompensa con
                 primas más asequibles que la competencia.
               </p>
@@ -34,7 +34,7 @@ export default function BenefitCard() {
                 <img src={technology} alt="" />
               </div>
               <h6 className="text-xl font-semibold">Tecnología Avanzada</h6>
-              <p className="mt-2 mb-4 ">
+              <p className="my-2 ">
                 Te proporcionamos repuestos y tecnología de la más alta calidad
                 para disfrutar de tu vehículo eléctrico al máximo.
               </p>
@@ -51,7 +51,7 @@ export default function BenefitCard() {
                 <img className="" src={security} alt="" />
               </div>
               <h6 className="text-xl font-semibold t">Seguridad</h6>
-              <p className="mt-2 mb-4 ">
+              <p className="my-2 ">
                 Garantizamos que puedas seguir disfrutando de tu experiencia de
                 conducción eléctrica con total seguridad.
               </p>

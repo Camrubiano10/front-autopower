@@ -2,7 +2,7 @@ export default function TableBenefit() {
   return (
     <div className="relative md:w-8/12 overflow-x-auto mx-4">
 
-      <table className="w-full text-sm text-left text-cyan-500 dark:text-gray-400 mb-10
+      <table className="w-full text-sm text-left text-cyan-500 dark:text-gray-400 mb-16
       ">
         <thead className="text-xs text-white uppercase bg-gradient-to-r from-indigo-800 to-cyan-400 dark:bg-gray-700 dark:text-gray-400">
           <tr>
