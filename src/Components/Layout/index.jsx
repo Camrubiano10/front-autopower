@@ -9,7 +9,7 @@ export default function Layout() {
       ">
         <div className="container m-auto flex justify-between items-center tracking-wide text-white">
           <Link to="/">
-            <img className="md:w-36 w-32 ml-6" src={logo} />
+            <img className="md:w-36 w-32 ml-6 hover:scale-95" src={logo} />
           </Link>
           <ul className="hidden md:flex items-center pr-10 text-base font-semibold cursor-pointer">
             <Link to="/Benefits">

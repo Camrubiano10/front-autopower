@@ -10,23 +10,29 @@ export default function Hero({pryceForm}) {
     <>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={50}
+        spaceBetween={0}
         slidesPerView={1}
-        navigation
-        pagination={{ clickable: true }}
+        scrollbar={{
+          hide: false,
+        }}
+        
+
       >
-        <SwiperSlide>
+        {/* slide1 */}
+        <SwiperSlide className="border border-blue-800">
           <SwiperBasic pryceForm={pryceForm}/>
         </SwiperSlide>
-        {/* slide1 */}
-        <SwiperSlide>
+        
+        {/* slide2 */}
+        <SwiperSlide className="border border-green-800">
           <SwiperGold pryceForm={pryceForm}/>
         </SwiperSlide>
-        {/* slide2 */}
-        <SwiperSlide>
+        
+        {/* slide3 */}
+        <SwiperSlide className="border border-red-800">
           <SwiperPlatinium pryceForm={pryceForm}/>
         </SwiperSlide>
-        {/* slide3 */}
+        
       </Swiper>
     </>
   );
