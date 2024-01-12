@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import modalImage from "../../../public/modal.jpg";
 import modalImageResponsive from "../../../public/modal-responsive.jpg";
-import CloseButton from "../CloseButton";
 import Button from "../Button";
 
 export default function Modal({ visible, onClose }) {
@@ -13,30 +12,29 @@ export default function Modal({ visible, onClose }) {
     <>
       <section
         onClick={handleOnClose}
-        className="fixed inset-0 z-40 bg-black bg-opacity-40"
+        className="fixed inset-0 z-40 bg-black bg-opacity-50"
       >
-        <div className="fixed top-16 left-0 right-0 bottom-10 w-full md:w-3/6 h-4/6 md:h-4/6 mx-auto bg-gray-900/80 rounded-xl backdrop-blur-md flex flex-col md:flex-row gap-8 z-50">
+        <div className="fixed top-40 left-0 right-0  w-full md:w-3/6 h-4/6 md:h-4/6 mx-auto bg-black bg-opacity-80 rounded-xl backdrop-blur-sm flex flex-col md:flex-row z-50"> 
+        {/* contenedor 1  */}
           <img
             className="hidden md:block h-auto rounded-l-xl"
             src={modalImage}
           />
           <img
-            className="md:hidden w-auto rounded-t-xl"
+            className="md:hidden w-auto mx-8 rounded-lg mt-16 mb-4 border-white-500"
             src={modalImageResponsive}
           />
 
           <div className="flex flex-col md:flex-row-reverse">
-            <div className="md:mb-6 mb-2">
-              <CloseButton
-                onClick={onClose}
-                className="w-8 md:w-10 bg-white m-4 m p-3 left-5"
-              />
-            </div>
-            <div className="flex flex-col justify-center justify-items-center text-center">
-              <h3 className="text-white text-lg md:text-3xl mb-2 md:mb-5 font-bold">
+            {/* contenedor 2 */}
+
+            <div className="flex flex-col ">
+
+              <h3 className="text-white text-xl mx-auto md:mt-10 font-semibold text-center p-5
+              ">
                 Bienvenido a Auto Power
               </h3>
-              <p className="hidden md:block text-white p-4 mb-2 md:mb-4 text-sm">
+              <p className="hidden md:block text-white p-4 mb-2 md:mb-4 text-xs text-justify p-5 mx-6 font-light md:tracking-wider">
                 Nos complace que estés aquí, explorando las opciones para
                 proteger tu vehículo eléctrico. Sabemos que has tomado una
                 decisión consciente y sostenible al elegir un auto eléctrico, y
@@ -50,14 +48,14 @@ export default function Modal({ visible, onClose }) {
                 Estamos aquí para ayudarte a mantener tu auto eléctrico seguro y
                 en pleno funcionamiento. ¡Esperamos poder servirte pronto!
               </p>
-              <p className="md:hidden text-white p-4 mb-2 md:mb-4 text-sm">
+              <p className="md:hidden text-white mx-8 mb-10 text-sm text-center tracking-widest">
                 Nos complace que estés aquí, explorando las opciones para
                 proteger tu vehículo eléctrico. Sabemos que has tomado una
                 decisión consciente y sostenible al elegir un auto eléctrico, y
                 queremos asegurarnos de que recibas la mejor cobertura posible.
               </p>
               <Link to="/Benefits">
-                <div className="flex justify-center">
+                <div className="flex justify-center mx-4 mb-8 ">
                   <Button type="submit" text="Beneficios" variant="secondary" />
                 </div>
               </Link>
