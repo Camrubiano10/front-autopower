@@ -13,13 +13,13 @@ export default function Hero({pryceForm}) {
         spaceBetween={0}
         slidesPerView={1}
         scrollbar={{
-          hide: false,
+          hide: true,
         }}
-        
+        navigation={true}
 
       >
         {/* slide1 */}
-        <SwiperSlide className="border border-blue-800">
+        <SwiperSlide className="mb-4">
           <SwiperBasic pryceForm={pryceForm}/>
         </SwiperSlide>
         
