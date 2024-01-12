@@ -5,11 +5,11 @@ export default function Benefits() {
       <div className="">
         <HeroBenefit />
       </div>
-      <section className=" bg-gray-300">
+      <section className=" bg-white">
         <BenefitCard />
       </section>
 
-      <div className="flex justify-center  bg-gray-300 pb-5">
+      <div className="flex justify-center bg-white">
         <TableBenefit />
       </div>
     </>

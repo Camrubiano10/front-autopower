@@ -2,9 +2,9 @@ import aboutImage from "../../../public/aboutImage.jpg";
 export default function About() {
   return (
     <>
-      <div className="md:min-h-min md:py-32 flex flex-wrap items-center mt-12">
+      <div className="md:min-h-min md:py-[6.34%] flex flex-wrap items-center mt-12">
         <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
-          <h3 className="text-3xl font-semibold leading-normal my-8 mt-16">
+          <h3 className="text-3xl font-semibold leading-normal my-8 mt-auto">
             Sobre Nosotros
           </h3>
           <p className="text-justify text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
@@ -25,7 +25,7 @@ export default function About() {
             <img
               alt=""
               src={aboutImage}
-              className="w-full align-middle rounded-t-lg"
+              className="w-full my-auto align-middle rounded-t-lg"
             />
           </div>
         </div>
