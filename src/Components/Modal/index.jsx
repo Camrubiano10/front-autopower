@@ -31,15 +31,15 @@ export default function Modal({ visible, onClose }) {
 
             <div className="flex flex-col ">
 
-              <h3 className="text-white text-xl mx-auto md:mt-10 font-bold text-center p-4 
+              <h3 className="text-yellow-100 text-xl mx-auto md:mt-10 font-bold text-center p-4 
               ">
                 ¡Bienvenido a Autopower!
               </h3>
               <div className="hidden md:block p-2 mb-2 md:mb-6 text-xs md:text-sm font-light text-justify mx-8  md:tracking-wider text-white  ">
               <p>
-              En Autopower nuestro objetivo es brindarle la libertad de conducir su vehículo eléctrico sin preocupaciones.</p>
-              <p className="mt-4"> Sabemos que la <spam className="font-bold text-blue-100 ">libertad</spam> es un valor importante para nuestros clientes, y es por eso que nos inspiramos en ella para ofrecerle los mejores seguros de vehículos eléctricos.</p> 
-              <p className="mt-4">Nuestros seguros están diseñados para proteger su vehículo eléctrico y su <spam className="font-bold text-blue-100 ">libertad</spam> de conducirlo.
+              En Autopower nuestro objetivo es brindarle la <spam className="font-bold text-yellow-100 ">libertad</spam> de conducir su vehículo eléctrico sin preocupaciones.</p>
+              <p className="mt-4"> Sabemos que la <spam className="font-bold text-yellow-100 ">libertad</spam> es un valor importante para nuestros clientes, y es por eso que nos inspiramos en ella para ofrecerle los mejores seguros de vehículos eléctricos.</p> 
+              <p className="mt-4">Nuestros seguros están diseñados para proteger su vehículo eléctrico y su <spam className="font-bold text-yellow-100 ">libertad</spam> de conducirlo.
               <p className="font-bold mt-4 text-yellow-100">¡Gracias por elegirnos! 💡⚡</p> 
               </p>
               </div>

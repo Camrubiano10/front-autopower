@@ -8,16 +8,17 @@ export default function Hero({pryceForm}) {
 
   return (
     <>
-    <div className="bg-image bg-cover bg-center">
+    <div className="bg-image bg-cover bg-bottom colorScroll">
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={0}
         slidesPerView={1}
         scrollbar={{
-          hide: false,
+          hide: false, 
         }}
         navigation={true}
         loop={true}
+        
       >
         {/* slide1 */}
         <SwiperSlide className="mb-4">

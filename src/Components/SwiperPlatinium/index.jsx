@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import Button from "../Button"
-import auto2 from "../../assets/img/auto2.png";
 import star from "../../assets/icons/star.png";
 import { useNavigate } from "react-router-dom";
 
@@ -28,7 +27,7 @@ export default function SwiperBasic({ pryceForm }) {
                 
                 bg-gradient-to-r from-cyan-800 to-slate-50
                 ">
-                    PLAN BASIC
+                    PLAN PLATINIUM
                 </h2>
 
                 {/* <img

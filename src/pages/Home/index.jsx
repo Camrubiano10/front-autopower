@@ -31,7 +31,8 @@ export default function Home() {
       </section> 
 
       <main className="bg-white mt-8  ">
-      <h2 className="text-lg lg:text-5xl text-center mb-12 font-bold tracking-widest px-20 text-cyan-700 ">
+      <h2 className="text-lg lg:text-5xl text-center mb-12 font-bold tracking-widest px-20 
+      bg-gradient-to-r from-cyan-800 to-teal-100 bg-clip-text text-transparent ">
             Descubre el significado de LIBERTAD con nuestros planes mensuales:
           </h2>
 

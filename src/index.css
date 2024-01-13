@@ -7,17 +7,20 @@ body, input, button {
 }
 
 .bg-image {
-    background-image: url('../public/BG-hero1.jpg');
+    background-image: url('../public/hero2.jpg');
 }
 
-.bg-image-gold {
-    background-image: url('../public/BG-hero2.jpg');
-}
-
-.bg-image-platinium {
-    background-image: url('../public/BG-hero3.jpg');
-}
 
 .bg-image-viaje {
     background-image: url('../public/viaje.jpg');
+}
+
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+    bottom: 10px;
+    height: 15px;
+    
+}
+
+.swiper-scrollbar-drag {
+    background: rgba(207, 255, 253, 0.5);
 }
