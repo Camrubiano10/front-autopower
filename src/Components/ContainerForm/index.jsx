@@ -22,7 +22,10 @@ export default function ContainerForms({
     telefono,
     email,
     tipoVehiculo,
+    numeroPlaca,
   } = valoresForms;
+
+
   const regExpCorreo = new RegExp(
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
   );
@@ -265,6 +268,24 @@ export default function ContainerForms({
               <Paragraph valueParagraph="Seleccione un tipo de vehiculo." />
             )}
           </div>
+
+          <div className="mb-1">
+            <TextFaild
+              type="text"
+              name="direccion"
+              placeholder="Direccion de residencia"
+              value={direccion}
+              onChange={handleActualizarInputs}
+              className="w-full"
+              required={false}
+            />
+
+            {Mensaje && valoresForms.direccion == "" && (
+              <Paragraph valueParagraph="Ingrese una dirección." />
+            )}
+          </div>    
+
+
           <div className="text-center">
             <Button
               type="submit"

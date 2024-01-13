@@ -32,7 +32,7 @@ export default function Home() {
 
       <main className="bg-white mt-8  ">
       <h2 className="text-lg lg:text-5xl text-center mb-12 font-bold tracking-widest px-20 text-cyan-700 ">
-            Descubre el significado de libertad con nuestros planes mensuales
+            Descubre el significado de LIBERTAD con nuestros planes mensuales:
           </h2>
 
         <Hero pryceForm={pryceForm}/>

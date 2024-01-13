@@ -15,21 +15,22 @@ export default function SwiperBasic({ pryceForm }) {
 
     return (
 
-        <div className="min-w-[60%] w-[90%]   md:w-full md:h-[383px] rounded-xl md:rounded-none mx-auto md:flex 
+        <div className="min-w-[60%] w-[90%]   md:w-full md:h-[383px] rounded-xl md:rounded-none mx-auto md:flex md:justify-center 
         
-        bg-image bg-cover bg-center
         
-        ">
+        border border-blue-500
+        "> 
+        {/* bg-image bg-cover bg-center */}
 
         {/* container principal  */}
 
-            <div className="flex flex-col w-full md:w-[52%]  my-4 md:mb-10 md:mt-4  ">
+            <div className="flex flex-col w-full md:w-[45%]  my-4 border border-red-900  ">
 
                 <h2 className="mb-2 py-2 md:py-1.5 w-[80%] md:w-[70%] text-center text-[20px] md:text-2xl tracking-widest font-bold  rounded-r-md  italic text-white
                 
-                bg-gradient-to-r from-cyan-600 to-slate-50
+                bg-gradient-to-r from-cyan-800 to-slate-50
                 ">
-                    Plan Basic
+                    PLAN BASIC
                 </h2>
 
                 {/* <img
@@ -45,8 +46,8 @@ export default function SwiperBasic({ pryceForm }) {
 
             </div>
 
-            <div className="mt-4 text-center md:text-right md:my-6 md:mr-15 bg-gradient-to-l from-cyan-600 to-slate-50 rounded-r-lg 
-            
+            <div className="mt-4 text-center md:text-right md:my-4 md:mr-15 rounded-r-lg 
+            bg-gradient-to-l from-black to-slate-50  border border-yellow-600            
             ">
 
                 <h2 className="font-bold text-sm md:text-base md:text-white md:pr-6 md:mt-2">

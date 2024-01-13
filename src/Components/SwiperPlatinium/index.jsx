@@ -15,21 +15,20 @@ export default function SwiperBasic({ pryceForm }) {
 
     return (
 
-        <div className="min-w-[60%] w-[90%]   md:w-full md:h-[383px] rounded-xl md:rounded-none mx-auto md:flex 
+        <div className="min-w-[60%] w-[90%]   md:w-full md:h-[383px] rounded-xl md:rounded-none mx-auto md:flex md:justify-center 
         
-        bg-image-platinium bg-cover bg-center 
         
-        ">
+        border border-blue-500
+        "> 
+            {/* bg-image-platinium bg-cover bg-center  */}
 
-        {/* container principal  */}
+            <div className="flex flex-col w-full md:w-[45%]  my-4 border border-red-900  ">
 
-            <div className="flex flex-col w-full md:w-[52%]  my-4 md:mb-10 md:mt-4  ">
-
-                <h2 className="mb-2 py-2 md:py-1.5 w-[80%] md:w-[70%] text-center text-[20px] md:text-2xl tracking-widest font-bold  rounded-r-md  italic
+                <h2 className="mb-2 py-2 md:py-1.5 w-[80%] md:w-[70%] text-center text-[20px] md:text-2xl tracking-widest font-bold  rounded-r-md  italic text-white
                 
-                bg-gradient-to-r from-white to-slate-50
+                bg-gradient-to-r from-cyan-800 to-slate-50
                 ">
-                    Plan Platinium
+                    PLAN BASIC
                 </h2>
 
                 {/* <img
@@ -45,18 +44,17 @@ export default function SwiperBasic({ pryceForm }) {
 
             </div>
 
-            <div className="mt-4 text-center md:text-left md:my-10 md:mr-10 ">
+            <div className="mt-4 text-center md:text-right md:my-4 md:mr-15 rounded-r-lg 
+            bg-gradient-to-l from-black to-slate-50  border border-yellow-600            
+            ">
 
-                <h3 className="font-bold text-sm md:text-base md:pl-6">
-                    ¡Precios a tu alcance!
-                </h3>
-                
-                <h2 className="mt-1 md:mt-4 font-semibold tracking-wider md:pl-6 md:text-xl">
+                <h2 className="font-bold text-sm md:text-base md:text-white md:pr-6 md:mt-2">
                     Seguro vehicular al 100%
                 </h2>
 
-                <div className="w-[80%] mx-auto md:ml-2 md:pl-6 my-2 md:my-8 flex flex-col ">
-                    <p className=" flex items-start text-xs pl-14 md:pl-0 md:text-xl italic">
+
+                <div className="w-[80%] mx-auto md:mr-2 md:pr-6 my-2  flex flex-col ">
+                    <p className=" flex items-start text-xs pr-14 md:text-xl   italic md:text-white">
                         Desde
                     </p>
                     <h2 className="text-4xl md:text-7xl font-bold md:my-2 drop-shadow-lg tracking-wider">
