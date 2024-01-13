@@ -24,12 +24,12 @@ export default function Hero({pryceForm}) {
         </SwiperSlide>
         
         {/* slide2 */}
-        <SwiperSlide className="border border-green-800">
+        <SwiperSlide className="">
           <SwiperGold pryceForm={pryceForm}/>
         </SwiperSlide>
         
         {/* slide3 */}
-        <SwiperSlide className="border border-red-800">
+        <SwiperSlide className="">
           <SwiperPlatinium pryceForm={pryceForm}/>
         </SwiperSlide>
         

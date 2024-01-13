@@ -17,7 +17,7 @@ export default function SwiperBasic({ pryceForm }) {
 
         <div className="min-w-[60%] w-[90%]   md:w-full md:h-[383px] rounded-xl md:rounded-none mx-auto md:flex 
         
-        bg-gradient-to-r from-cyan-200 to-green-100
+        bg-image-gold bg-cover bg-center
         
         ">
 
@@ -25,14 +25,14 @@ export default function SwiperBasic({ pryceForm }) {
 
             <div className="flex flex-col w-full md:w-[52%]  my-4 md:mb-10 md:mt-4  ">
 
-                <h2 className="mb-2 py-2 md:py-1.5 w-[80%] md:w-[70%] text-center text-[20px] md:text-2xl tracking-widest font-bold  rounded-r-md  italic text-[#FEF7E7]
+                <h2 className="mb-2 py-2 md:py-1.5 w-[80%] md:w-[70%] text-center text-[20px] md:text-2xl tracking-widest font-bold  rounded-r-md  italic
                 
-                bg-gradient-to-r from-cyan-600 to-slate-50
+                bg-gradient-to-r from-yellow-600 to-slate-50
                 ">
-                    Plan Basic
+                    Plan Gold
                 </h2>
 
-                <img
+                {/* <img
                     className="w-[55%] md:pl-6 m-auto
                     
                     drop-shadow-black-2xl 
@@ -40,7 +40,7 @@ export default function SwiperBasic({ pryceForm }) {
                     "
                     src={auto2}
                     alt=""
-                    />
+                    /> */}
 
 
             </div>

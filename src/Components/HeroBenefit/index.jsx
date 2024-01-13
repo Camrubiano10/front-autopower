@@ -1,6 +1,11 @@
-import beneficios from "../../../public/beneficios_web.jpg";
+import beneficios from "../../../public/viaje.jpg";
 export default function HeroBenefit() {
   return (
-    <img className="md:w-full md:h-96 bg-cover border-b border-white bg-center" src={beneficios} alt="" />
+   <div className="md:w-full md:h-96 
+   bg-image-viaje bg-cover bg-top
+   ">
+    <p>BENEFICIOS</p>
+    {/* <img className="   border-b border-white " src={beneficios} alt="" /> */}
+    </div>
   );
 }

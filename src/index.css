@@ -5,3 +5,19 @@
 body, input, button {
     font-family: 'Poppins', sans-serif;
 }
+
+.bg-image {
+    background-image: url('./assets/img/BG-hero1.jpg');
+}
+
+.bg-image-gold {
+    background-image: url('./assets/img/BG-hero2.jpg');
+}
+
+.bg-image-platinium {
+    background-image: url('./assets/img/BG-hero3.jpg');
+}
+
+.bg-image-viaje {
+    background-image: url('../public/viaje.jpg');
+}
