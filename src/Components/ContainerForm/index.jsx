@@ -22,6 +22,7 @@ export default function ContainerForms({
     telefono,
     email,
     tipoVehiculo,
+    placa,
   } = valoresForms;
   const regExpCorreo = new RegExp(
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
@@ -49,7 +50,9 @@ export default function ContainerForms({
       valoresForms.direccion === "" ||
       valoresForms.telefono === "" ||
       valoresForms.tipoVehiculo === "0" ||
-      valoresForms.email === ""
+      valoresForms.email === "" ||
+      valoresForms.placa === ""
+
     ) {
       status = false;
     }
@@ -66,7 +69,7 @@ export default function ContainerForms({
 
     if (validate()) {
       console.log("guardando");
-      await create(valoresForms, "buy_service");
+      // await create(valoresForms, "buy_service");
       setActiveStep(1);
       Swal.fire("Exito", "Datos Registrados", "success");
     } else {
@@ -265,6 +268,22 @@ export default function ContainerForms({
               <Paragraph valueParagraph="Seleccione un tipo de vehiculo." />
             )}
           </div>
+          <div className="mb-1">
+            <TextFaild
+              type="text"
+              name="placa"
+              placeholder="Numero de placa"
+              value={placa}
+              onChange={handleActualizarInputs}
+              className="w-full"
+              required={true}
+            />
+
+            {Mensaje && valoresForms.placa == "" && (
+              <Paragraph valueParagraph="Ingresa tu placa." />
+            )}
+          </div>
+          
           <div className="text-center">
             <Button
               type="submit"
