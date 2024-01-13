@@ -1,6 +1,6 @@
 export default function TableBenefit() {
   return (
-    <div className="relative md:w-8/12 overflow-x-auto mx-4">
+    <div className="relative md:w-8/12 overflow-x-auto mx-4 border-2 border-white">
 
       <table className="w-full text-sm text-left text-cyan-500 dark:text-gray-400 mb-16
       ">

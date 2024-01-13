@@ -8,12 +8,13 @@ export default function BenefitCard() {
 
       <div className="flex flex-wrap md:flex-nowrap md:gap-7 ">
         {/* CARD1  */}
-        <div className=" w-full md:w-4/12 px-4 text-center mt-8 ">
+        <div className=" w-full md:w-4/12 px-4 text-center mt-8  ">
           <div className="relative flex flex-col min-w-0 break-words w-full mb-8 rounded-lg
-          bg-gradient-to-r from-blue-200 to-cyan-200 
+          bg-gradient-to-r from-blue-200 to-cyan-200
+          
           ">
-            <div className=" px-4 py-4 flex-auto shadow-2xl rounded-lg">
-              <div className="text-white p-3 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-xl rounded-full bg-white ">
+            <div className=" px-4 py-4 flex-auto shadow-2xl rounded-lg ">
+              <div className="text-white p-3 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-xl rounded-full bg-white  ">
                 <img src={moneyBag} alt="" />
               </div>
               <h6 className="text-xl font-semibold">Ahorro</h6>
@@ -24,11 +25,13 @@ export default function BenefitCard() {
             </div>
           </div>
         </div>
+
         {/* CARD2  */}
-        <div className="w-full md:w-4/12 px-4 text-center md:mt-8">
-          <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+        <div className="w-full md:w-4/12 px-4 text-center md:mt-8 ">
+          <div className="relative flex flex-col min-w-0 break-words bg-white w-full  shadow-lg rounded-lg">
             <div className="px-4 py-4 flex-auto rounded-lg shadow-2xl 
             bg-gradient-to-r from-cyan-200 to-green-100 
+            
             ">
               <div className="text-white p-3 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-xl rounded-full bg-white">
                 <img src={technology} alt="" />
@@ -43,7 +46,7 @@ export default function BenefitCard() {
         </div>
         {/* CARD3 */}
         <div className=" w-full md:w-4/12 px-4 text-center md:mt-8">
-          <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg
+          <div className="relative flex flex-col min-w-0 break-words bg-white w-full  shadow-lg rounded-lg 
           bg-gradient-to-r from-green-100 to-yellow-200 
           ">
             <div className="px-4 py-4 flex-auto rounded-lg shadow-2xl">

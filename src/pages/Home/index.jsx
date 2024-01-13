@@ -7,6 +7,7 @@ import {
   SliderIcon,
   SlideQuestions,
   Modal,
+  BenefitCard, HeroBenefit
 } from "../../Components";
 export default function Home() {
 
@@ -21,14 +22,24 @@ export default function Home() {
 
   return (
     <>
-      <main className="bg-white mt-8 md:mt-14 ">
+
+      <div className="mt-14">
+        <HeroBenefit />
+      </div>
+      <section className=" bg-white">
+        <BenefitCard />
+      </section> 
+
+      <main className="bg-white mt-8  ">
+      <h2 className="text-lg lg:text-5xl text-center mb-12 font-bold tracking-widest px-20 text-cyan-700 ">
+            Descubre el significado de libertad con nuestros planes mensuales
+          </h2>
+
         <Hero pryceForm={pryceForm}/>
 
         {/* body home  */}
         <section className="mt-6 w-[60%] m-auto">
-          <h2 className="text-lg lg:text-4xl text-center my-3 font-bold tracking-wider">
-            Conoce nuestros planes mensuales de seguro vehicular
-          </h2>
+  
           <div className="md:flex mt-8 md:mt-16 gap-12 ">
             <ContainerPriceBasic pryceForm={pryceForm}/>
             <ContainerPriceGold pryceForm={pryceForm}/>
