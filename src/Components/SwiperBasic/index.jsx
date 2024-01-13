@@ -45,18 +45,17 @@ export default function SwiperBasic({ pryceForm }) {
 
             </div>
 
-            <div className="mt-4 text-center md:text-left md:my-10 md:mr-10 ">
+            <div className="mt-4 text-center md:text-right md:my-6 md:mr-15 bg-gradient-to-l from-cyan-600 to-slate-50 rounded-r-lg 
+            
+            ">
 
-                <h3 className="font-bold text-sm md:text-base md:pl-6">
-                    ¡Precios a tu alcance!
-                </h3>
-                
-                <h2 className="mt-1 md:mt-4 font-semibold tracking-wider md:pl-6 md:text-xl">
+                <h2 className="font-bold text-sm md:text-base md:text-white md:pr-6 md:mt-2">
                     Seguro vehicular al 100%
                 </h2>
 
-                <div className="w-[80%] mx-auto md:ml-2 md:pl-6 my-2 md:my-8 flex flex-col ">
-                    <p className=" flex items-start text-xs pl-14 md:pl-0 md:text-xl italic">
+
+                <div className="w-[80%] mx-auto md:mr-2 md:pr-6 my-2  flex flex-col ">
+                    <p className=" flex items-start text-xs pr-14 md:text-xl   italic md:text-white">
                         Desde
                     </p>
                     <h2 className="text-4xl md:text-7xl font-bold md:my-2 drop-shadow-lg tracking-wider">
