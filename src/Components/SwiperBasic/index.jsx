@@ -1,6 +1,4 @@
-/* eslint-disable react/prop-types */
 import Button from "../Button"
-import star from "../../assets/icons/star.png";
 import { useNavigate } from "react-router-dom";
 
 export default function SwiperBasic({ pryceForm }) {
@@ -11,19 +9,11 @@ export default function SwiperBasic({ pryceForm }) {
         localStorage.setItem('plan_seleccionado', JSON.stringify({ plan: 'Basico', precio: 10 }))
         navigate("/BuyService")
     }
-
     return (
 
-        <div className="min-w-[60%] w-[90%]   md:w-full md:h-[383px] rounded-xl md:rounded-none mx-auto md:flex md:justify-center 
-        
-        
-        
-        "> 
-        {/* bg-image bg-cover bg-center */}
+        <div className="min-w-[60%] w-[90%] md:w-[99%]  md:h-[383px] rounded-xl md:rounded-none mx-auto md:flex md:justify-center"> 
 
-        {/* container principal  */}
-
-            <div className="flex flex-col w-full md:w-[48%]  my-4  ">
+            <div className="flex flex-col w-full md:w-[46%]  my-4  ">
 
                 <h2 className="mb-2 py-2 md:py-1.5 w-[80%] md:w-[70%] text-center text-[20px] md:text-3xl tracking-widest font-bold  rounded-l-lg  italic 
                 
@@ -31,18 +21,6 @@ export default function SwiperBasic({ pryceForm }) {
                 ">
                     PLAN BASIC
                 </h2>
-
-                {/* <img
-                    className="w-[55%] md:pl-6 m-auto
-                    
-                    drop-shadow-black-2xl 
-                    
-                    "
-                    src={auto2}
-                    alt=""
-                    /> */}
-
-
             </div>
 
             <div className="mt-4 text-center md:text-right md:my-4 md:mr-15 rounded-r-lg 
@@ -77,10 +55,10 @@ export default function SwiperBasic({ pryceForm }) {
 
                 <div className=" text-sm md:text-lg text-right text-wrap pr-6">
                 {/* <img className="w-4 h-4 " src={star} alt="" /> */}
-                <p>⭐ Evite las preocupaciones con nuestra asistencia 24 h.</p>
+                <p>◽ Evite las preocupaciones con nuestra asistencia 24 h.</p>
 
 
-                <p className="mt-4">⭐ Revisión técnica mensualmente para el seguro de tu auto y el tuyo.</p>
+                <p className="mt-4">◽ Revisión técnica mensualmente para la seguridad de su auto y el suyo.</p>
                 </div>
 
                 </div>

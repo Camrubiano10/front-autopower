@@ -1,7 +1,6 @@
-/* eslint-disable react/prop-types */
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper/modules";
 import { SwiperBasic, SwiperGold, SwiperPlatinium } from "../../Components";
 
 export default function Hero({pryceForm}) {
@@ -10,7 +9,7 @@ export default function Hero({pryceForm}) {
     <>
     <div className="bg-image bg-cover bg-bottom colorScroll">
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={0}
         slidesPerView={1}
         scrollbar={{
@@ -18,7 +17,7 @@ export default function Hero({pryceForm}) {
         }}
         navigation={true}
         loop={true}
-        
+        autoplay={{ delay: 3000,  disableOnInteraction: false }}
       >
         {/* slide1 */}
         <SwiperSlide className="mb-4">
