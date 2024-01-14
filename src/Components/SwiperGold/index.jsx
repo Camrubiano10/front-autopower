@@ -17,14 +17,16 @@ export default function SwiperBasic({ pryceForm }) {
         <div className="min-w-[60%] w-[90%]   md:w-full md:h-[383px] rounded-xl md:rounded-none mx-auto md:flex md:justify-center 
         
         
-        border border-blue-500
+        
         "> 
-            {/* bg-image-gold bg-cover bg-center */}
+        {/* bg-image bg-cover bg-center */}
 
-            <div className="flex flex-col w-full md:w-[45%]  my-4 border border-red-900  ">
+        {/* container principal  */}
 
-                <h2 className="mb-2 py-2 md:py-1.5 w-[80%] md:w-[70%] text-center text-[20px] md:text-2xl tracking-widest font-bold  rounded-r-md  italic text-white
-                
+            <div className="flex flex-col w-full md:w-[48%]  my-4  ">
+
+                <h2 className="mb-2 py-2 md:py-1.5 w-[80%] md:w-[70%] text-center text-[20px] md:text-3xl tracking-widest font-bold  rounded-l-lg  italic 
+                text-yellow-100
                 bg-gradient-to-r from-cyan-800 to-slate-50
                 ">
                     PLAN GOLD
@@ -44,43 +46,48 @@ export default function SwiperBasic({ pryceForm }) {
             </div>
 
             <div className="mt-4 text-center md:text-right md:my-4 md:mr-15 rounded-r-lg 
-            bg-gradient-to-l from-black to-slate-50  border border-yellow-600            
+            bg-gradient-to-l from-cyan-800 to-slate-50              
+            
             ">
 
-                <h2 className="font-bold text-sm md:text-base md:text-white md:pr-6 md:mt-2">
+                <h2 className="font-bold text-sm md:text-base tracking-wider text-right pr-6 md:mt-2
+                text-teal-100
+                ">
                     Seguro vehicular al 100%
                 </h2>
 
 
-                <div className="w-[80%] mx-auto md:mr-2 md:pr-6 my-2  flex flex-col ">
-                    <p className=" flex items-start text-xs pr-14 md:text-xl   italic md:text-white">
+                <div className="w-[80%] mx-auto mr-8  flex flex-col ">
+                    <p className=" flex justify-center text-xs md:text-xl italic text-white">
                         Desde
                     </p>
-                    <h2 className="text-4xl md:text-7xl font-bold md:my-2 drop-shadow-lg tracking-wider">
+                    <h2 className="text-5xl md:text-7xl font-bold md:my-2 drop-shadow-xl tracking-widest text-white ">
                         ${pryceForm.Basic}
                     </h2>
-                    <h2 className="flex items-start text-xs pl-14 md:pl-0 md:text-xl italic">
+                    {/* <h2 className="flex items-start text-xs pl-14 md:pl-0 md:text-xl italic">
                         Por mes
-                    </h2>
+                    </h2> */}
                 </div>
 
-                <div className="flex gap-4 pl-0 pr-5 mt-4  items-center text-sm md:text-lg text-left ">
-                    <img className="w-4 h-4" src={star} alt="" />
-                    <p>
-                        Asistencia las 24 h para su vehículo, sin preocupaciones de
-                        más.
-                    </p>
+                <div className="flex text-white ">
+                {/* contenedor 1 */}
+                <div className="w-2/4"> 
+                    
+                    <h2></h2>
+                </div>
+                {/* contenedor 2 */}
+
+                <div className=" text-sm md:text-lg text-right text-wrap pr-6">
+                {/* <img className="w-4 h-4 " src={star} alt="" /> */}
+                <p>⭐ Evite las preocupaciones con nuestra asistencia 24 h.</p>
+
+
+                <p className="mt-4">⭐ Revisión técnica mensualmente para el seguro de tu auto y el tuyo.</p>
                 </div>
 
-                <div className="flex gap-4 pl-0 pr-5 mt-6  items-center text-sm md:text-lg text-left ">
-                    <img className="w-4 h-4 " src={star} alt="" />
-                    <p>
-                        Revisión técnica mensualmente para el seguro de tu auto y el
-                        tuyo.
-                    </p>
                 </div>
 
-                <div className=" flex justify-center mt-5 ">
+                <div className=" flex justify-end mt-5 mr-6">
                     <Button type="submit" text="Cotizar" variant="secondary" handleButtonClick={handleButtonClick}/>
                 </div>
 

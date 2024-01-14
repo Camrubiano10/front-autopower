@@ -1,7 +1,7 @@
-const URLapi = "https://653d54fff52310ee6a9a19b6.mockapi.io/";
+const BASE_URL = "http://127.0.0.1:8000/api/v1/";
 
 export async function create(body, url) {
-  const response = await fetch(URLapi + url, {
+  const response = await fetch(BASE_URL + "/client/", {
     method: "POST",
     body:JSON.stringify(body),
     headers:{"Content-type": "application/json"}
