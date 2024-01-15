@@ -19,7 +19,7 @@ const handleButtonClick = () => {
                 
                 bg-gradient-to-r from-black to-slate-50
                 ">
-                    PLAN PLATINIUM
+                    PLAN PLATINUM
                 </h2>
 
             </div>
