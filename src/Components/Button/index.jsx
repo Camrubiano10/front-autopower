@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 export default function Button({
   text,
   type = "button",
@@ -7,6 +6,7 @@ export default function Button({
   disabled = false,
   handleButtonClick
 }) {
+  
   const colors = {
     primary:
       "bg-skyblue text-white font-semibold hover:bg-skyblue-select hover:shadow-lg hover:shadow-cyan-200/50",
@@ -20,7 +20,7 @@ export default function Button({
       <button
         type={type}
         disabled={disabled}
-        className={`w-11/12 py-2 mb-1 px-4 rounded-lg md:w-6/12 ${colors[variant]} ${className}`}
+        className={`w-11/12 py-2 mb-1 px-4 rounded-lg md:min-w-3.5 md:w-7/12  ${colors[variant]} ${className}`}
         onClick={handleButtonClick}
       >
         {text}

@@ -13,39 +13,44 @@ import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import CheckIcon from "@mui/icons-material/Check";
 import { Button } from "../../Components";
+import { Link } from "react-router-dom";
+
 
 function createData(name, basic, gold, platinum, details) {
 return { name, basic, gold, platinum, details };
 }
 
+
 const handleButtonClick1 = () => {
 localStorage.setItem(
-    "plan_seleccionado",
-    JSON.stringify({ plan: "Basic", precio: 10 })
+    "plan_seleccionado", JSON.stringify({ plan: "Basic", precio: 10 })
 );
-navigate("/BuyService");
+to="/BuyService";
 };
 
-// const handleButtonClick2= ()=>{
-//     localStorage.setItem('plan_seleccionado', JSON.stringify({ plan: 'Gold', precio: 20 }))
-//     navigate("/BuyService")
-// }
-// const handleButtonClick3= ()=>{
-//     localStorage.setItem('plan_seleccionado', JSON.stringify({ plan: 'Platinum', precio: 30 }))
-//     navigate("/BuyService")
-// }
+const handleButtonClick2 = () => {
+    localStorage.setItem(
+        "plan_seleccionado", JSON.stringify({ plan: "Gold", precio: 20 })
+    );
+<Link to="/BuyService" ></Link>
+    };
 
-const buttonBasic = (
-<Button
-    type="submit"
-    text="Cotizar"
-    variant="primary"
-    handleButtonClick={handleButtonClick1}
-/>
+const handleButtonClick3 = () => {
+localStorage.setItem(
+    "plan_seleccionado", JSON.stringify({ plan: "Platinum", precio: 30 })
 );
+<Link to="/BuyService" ></Link>
+};
 
-// const buttonGold = <div className=" flex justify-center"><Button type="submit" text="Cotizar" variant="primary" handleButtonClick={handleButtonClick}/></div>
-// const buttonPlatinum = <div className=" flex justify-center"><Button type="submit" text="Cotizar" variant="primary" handleButtonClick={handleButtonClick}/></div>
+
+const buttonBasic =
+<Button type="submit" text="Adquiere Plan Basic"  handleButtonClick={handleButtonClick1} />
+
+const buttonGold = 
+<Button type="submit" text="Adquiere Plan Gold" variant="primary" handleButtonClick={handleButtonClick2}/>
+
+const buttonPlatinum = 
+<Button type="submit" text="Adquiere Plan Platinum" variant="primary" handleButtonClick={handleButtonClick3} />
 
 const redIcon = <CloseIcon className="text-red-500" />;
 const greenIcon = <CheckIcon className="text-green-500" />;
@@ -75,14 +80,6 @@ createData(
 ),
 
 createData(
-    "Seguro contra robos del 35%",
-    redIcon,
-    greenIcon,
-    redIcon,
-    "Este plan te cubrira ante robos para tu tranquilidad."
-),
-
-createData(
     "Chofer de reemplazo",
     redIcon,
     greenIcon,
@@ -107,14 +104,6 @@ createData(
 ),
 
 createData(
-    "Cobertura ante razones externas",
-    redIcon,
-    redIcon,
-    greenIcon,
-    "Tu vehiculo se encuentra cubierto frente a daño colateral por manifestaciones y disturbios."
-),
-
-createData(
     "GPS antirrobo",
     redIcon,
     redIcon,
@@ -127,6 +116,14 @@ createData(
     redIcon,
     redIcon,
     greenIcon,
+    "Hackea el sistema del auto en situaciones de riesgo."
+),
+
+createData(
+    "",
+    buttonBasic,
+    buttonGold,
+    buttonPlatinum,
     "Hackea el sistema del auto en situaciones de riesgo."
 ),
 ];
@@ -143,42 +140,49 @@ const handleClick = (index) => {
 };
 
 return (
-    <TableContainer className="mb-12">
-    <Table className="mx-auto min-w-[650px] max-w-[900px]  ">
+    <TableContainer className="mb-10">
+    <Table className="mx-auto min-w-[650px] max-w-[1250px]  ">
         {/* aria-label="simple table" */}
         <TableHead
-        sx={{ "& th": { color: "white", fontSize: 16 } }}
-        className="bg-gradient-to-r from-indigo-800 to-cyan-400 rounded-t-xl "
+        sx={{ "& th": { fontWeight: "bold", color: "white", fontSize: 18, paddingBottom: 1.5, paddingTop: 1.5 } }}
+        className="bg-gradient-to-r from-indigo-400 to-cyan-200  "
         >
-        <TableRow className="border border-red-200">
-            <TableCell />
+        <TableRow >
+            <TableCell className="" />
             <TableCell align="left">Beneficios</TableCell>
             <TableCell align="center">Plan Basic</TableCell>
             <TableCell align="center">Plan Gold</TableCell>
             <TableCell align="center">Plan Platinum</TableCell>
         </TableRow>
         </TableHead>
-        <TableBody>
+        <TableBody >
         {rows.map((row, index) => (
             <React.Fragment key={row.name}>
             <TableRow
-                sx={{ "&:last-child td,&:last-child th": { border: 0 } }}
+                sx={{ "&:last-child td,&:last-child th": { border: 0} }}
             >
                 <TableCell>
                 <IconButton
                     aria-label="expand row"
                     size="small"
-                    onClick={() => handleClick(index)}
+                    onClick={() => {
+                        if (index !== rows.length - 1) {
+                        handleClick(index);
+                        }
+                        }}
                 >
                     <ExpandMoreIcon />
                 </IconButton>
                 </TableCell>
-                <TableCell component="th" scope="row" align="justify">
+                <TableCell component="th" scope="row" align="justify ">
                 {row.name}
                 </TableCell>
-                <TableCell align="center">{row.basic}</TableCell>
-                <TableCell align="center">{row.gold}</TableCell>
-                <TableCell align="center">{row.platinum}</TableCell>
+                <TableCell  align="center">{row.basic}</TableCell>
+
+                <TableCell  align="center">{row.gold}</TableCell>
+
+                <TableCell  align="center">{row.platinum}</TableCell>
+
             </TableRow>
             {open === index && (
                 <TableRow>
@@ -186,7 +190,7 @@ return (
                     style={{ paddingBottom: 0, paddingTop: 0 }}
                     colSpan={5}
                 >
-                    <Box margin={1} className="text-center">
+                    <Box margin={1} className="text-center text-cyan-700 italic ">
                     <Typography variant="body2" gutterBottom component="div">
                         {row.details}
                     </Typography>

@@ -6,6 +6,7 @@ import {
   HeroBenefit,
   PlanTable
 } from "../../Components";
+
 export default function Home() {
   const [pryceForm, setPryceForm] = useState({
     Basic: 10,
@@ -37,7 +38,7 @@ export default function Home() {
         <Hero pryceForm={pryceForm} />
 
         <h2
-          className="text-lg lg:text-5xl text-center mt-12 mb-12 font-bold tracking-wider px-20 
+          className="text-lg md:text-4xl text-center mt-12 mb-8 font-bold tracking-wider px-20 
       bg-gradient-to-l from-indigo-400 to-cyan-400 bg-clip-text text-transparent "
         >
           Conoce nuestros planes:
