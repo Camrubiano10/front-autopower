@@ -2,7 +2,7 @@ export default function TableBenefit() {
   return (
     <div className="relative md:w-8/12 overflow-x-auto mx-4 border-2 border-white">
 
-      <table className="w-full text-sm text-left text-cyan-500 dark:text-gray-400 mb-16
+      <table className="w-full text-sm text-left text-cyan-500 dark:text-gray-400 mb-8
       ">
         <thead className="text-xs text-white uppercase bg-gradient-to-r from-indigo-800 to-cyan-400 dark:bg-gray-700 dark:text-gray-400">
           <tr>
@@ -76,19 +76,6 @@ export default function TableBenefit() {
             <td className="px-6 py-4">Todos</td>
             <td className="px-6 py-4">Mensual</td>
           </tr>
-
-
-          <tr className="bg-white border-b border-cyan-300 dark:bg-gray-800 dark:border-gray-700">
-            <th
-              scope="row"
-              className="px-6 py-4 font-medium text-cyan-900 whitespace-nowrap dark:text-white"
-            >
-              Razones externas
-            </th>
-            <td className="px-6 py-4">Platinum</td>
-            <td className="px-6 py-4">Mensual</td>
-          </tr>
-
 
           <tr className="bg-white border-b border-cyan-300 dark:bg-gray-800 dark:border-gray-700">
             <th
