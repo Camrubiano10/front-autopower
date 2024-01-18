@@ -12,48 +12,15 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import CheckIcon from "@mui/icons-material/Check";
-import { Button } from "../../Components";
-import { Link } from "react-router-dom";
 
 
 function createData(name, basic, gold, platinum, details) {
 return { name, basic, gold, platinum, details };
 }
 
-
-const handleButtonClick1 = () => {
-localStorage.setItem(
-    "plan_seleccionado", JSON.stringify({ plan: "Basic", precio: 10 })
-);
-to="/BuyService";
-};
-
-const handleButtonClick2 = () => {
-    localStorage.setItem(
-        "plan_seleccionado", JSON.stringify({ plan: "Gold", precio: 20 })
-    );
-<Link to="/BuyService" ></Link>
-    };
-
-const handleButtonClick3 = () => {
-localStorage.setItem(
-    "plan_seleccionado", JSON.stringify({ plan: "Platinum", precio: 30 })
-);
-<Link to="/BuyService" ></Link>
-};
-
-
-const buttonBasic =
-<Button type="submit" text="Adquiere Plan Basic"  handleButtonClick={handleButtonClick1} />
-
-const buttonGold = 
-<Button type="submit" text="Adquiere Plan Gold" variant="primary" handleButtonClick={handleButtonClick2}/>
-
-const buttonPlatinum = 
-<Button type="submit" text="Adquiere Plan Platinum" variant="primary" handleButtonClick={handleButtonClick3} />
-
 const redIcon = <CloseIcon className="text-red-500" />;
 const greenIcon = <CheckIcon className="text-green-500" />;
+
 const rows = [
 createData(
     "Asistencia las 24 horas",
@@ -119,13 +86,6 @@ createData(
     "Hackea el sistema del auto en situaciones de riesgo."
 ),
 
-createData(
-    "",
-    buttonBasic,
-    buttonGold,
-    buttonPlatinum,
-    "Hackea el sistema del auto en situaciones de riesgo."
-),
 ];
 
 export default function PlanTable() {
@@ -140,12 +100,11 @@ const handleClick = (index) => {
 };
 
 return (
-    <TableContainer className="mb-10">
-    <Table className="mx-auto min-w-[650px] max-w-[1250px]  ">
-        {/* aria-label="simple table" */}
+    <TableContainer>
+    <Table className="mx-auto min-w-[650px] max-w-[1250px] shadow-xl ">
         <TableHead
         sx={{ "& th": { fontWeight: "bold", color: "white", fontSize: 18, paddingBottom: 1.5, paddingTop: 1.5 } }}
-        className="bg-gradient-to-r from-indigo-400 to-cyan-200  "
+        className="bg-gradient-to-r from-blue-800 to-cyan-200  "
         >
         <TableRow >
             <TableCell className="" />
@@ -161,7 +120,7 @@ return (
             <TableRow
                 sx={{ "&:last-child td,&:last-child th": { border: 0} }}
             >
-                <TableCell>
+                <TableCell >
                 <IconButton
                     aria-label="expand row"
                     size="small"

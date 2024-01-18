@@ -4,7 +4,8 @@ import {
   Modal,
   BenefitCard,
   HeroBenefit,
-  PlanTable
+  PlanTable,
+  ButtonHome
 } from "../../Components";
 
 export default function Home() {
@@ -39,7 +40,7 @@ export default function Home() {
 
         <h2
           className="text-lg md:text-4xl text-center mt-12 mb-8 font-bold tracking-wider px-20 
-      bg-gradient-to-l from-indigo-400 to-cyan-400 bg-clip-text text-transparent "
+      bg-gradient-to-r from-indigo-600 to-cyan-400 bg-clip-text text-transparent "
         >
           Conoce nuestros planes:
         </h2>
@@ -54,6 +55,7 @@ export default function Home() {
         </section> */}
 
         <PlanTable />
+        <ButtonHome />
 
 
 

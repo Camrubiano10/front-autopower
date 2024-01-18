@@ -12,6 +12,10 @@ export default function Button({
       "bg-skyblue text-white font-semibold hover:bg-skyblue-select hover:shadow-lg hover:shadow-cyan-200/50",
     secondary:
       "text-black bg-white font-semibold hover:bg-white hover:text-skyblue hover:shadow-lg hover:shadow-cyan-200/50",
+    add:
+      "font-semibold shadow-xl text-white bg-gradient-to-r from-blue-400 to-cyan-300",
+
+
     block: "bg-gray-500 text-white font-semibold",
   };
 
