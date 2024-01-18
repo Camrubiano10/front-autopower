@@ -17,7 +17,7 @@ export default function Hero({pryceForm}) {
         }}
         navigation={true}
         loop={true}
-        autoplay={{ delay: 3000,  disableOnInteraction: false }}
+        autoplay={{ delay: 3000,  disableOnInteraction: true }}
       >
         {/* slide1 */}
         <SwiperSlide className="mb-4">

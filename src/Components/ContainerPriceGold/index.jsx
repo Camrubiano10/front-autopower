@@ -2,14 +2,16 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../Components";
 
-export default function ContainerPriceGold({pryceForm}) {
+export default function ContainerPriceGold({ pryceForm }) {
+  const navigate = useNavigate();
 
-  const navigate = useNavigate()
-
-  const handleButtonClick= ()=>{
-    localStorage.setItem('plan_seleccionado', JSON.stringify({ plan: 'Gold', precio: 20 }))
-    navigate("/BuyService")
-  }
+  const handleButtonClick = () => {
+    localStorage.setItem(
+      "plan_seleccionado",
+      JSON.stringify({ plan: "Gold", precio: 20 })
+    );
+    navigate("/BuyService");
+  };
 
   return (
     <div className="mt-12 md:mt-0 bg-darkblue-select rounded-2xl md:w-[33%] md:h-[33%]">
@@ -27,11 +29,16 @@ export default function ContainerPriceGold({pryceForm}) {
         </p>
 
         <h2 className="text-3xl font-bold mb-2 text-center color-#1F3142">
-        ${pryceForm.Gold}
+          ${pryceForm.Gold}
         </h2>
 
         <div className=" flex justify-center">
-          <Button type="submit" text="Cotizar" variant="primary" handleButtonClick={handleButtonClick}/>
+          <Button
+            type="submit"
+            text="Cotizar"
+            variant="primary"
+            handleButtonClick={handleButtonClick}
+          />
         </div>
 
         <ul>

@@ -1,11 +1,6 @@
 import { useState } from "react";
 import {
-  ContainerPriceBasic,
-  ContainerPriceGold,
-  ContainerPricePlatinum,
   Hero,
-  SliderIcon,
-  SlideQuestions,
   Modal,
   BenefitCard,
   HeroBenefit,
@@ -67,7 +62,7 @@ export default function Home() {
           </h2>
           <SliderIcon />
         </section> */}
-
+{/* 
         <section className="flex flex-col items-center justify-center">
         <h2
           className="text-lg lg:text-3xl text-center mt-24 mb-0 font-bold tracking-wider px-20 
@@ -75,9 +70,13 @@ export default function Home() {
         >
           Preguntas frecuentes:
         </h2>
+
+        
           <SlideQuestions />
         </section>
-      </main>
+        
+         */}
+        </main>
 
       <Modal onClose={handleOnClose} visible={showModal} />
     </>
