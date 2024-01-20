@@ -13,7 +13,6 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
             <div className="w-full ">
                 <div className="md:w-5/12 mx-auto">
                     <Stepper
-                        nonLinear={false} 
                         activeStep={activeStep}
                         isLastStep={(value) => setIsLastStep(value)}
                         isFirstStep={(value) => setIsFirstStep(value)}
@@ -22,7 +21,7 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
                                                 
                     >
                         <Step
-                            className="bg-gray-100 border "
+                            className="bg-gray-300 border "
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
                             onClick={() => setActiveStep(0)}
@@ -32,7 +31,7 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
                         </Step>
 
                         <Step
-                            className="bg-gray-200 border border-darkblue"
+                            className="bg-gray-300 border "
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
                             onClick={() => setActiveStep(1)}
@@ -42,7 +41,7 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
                         </Step>
 
                         <Step
-                            className="bg-gray-200 border border-darkblue"
+                            className="bg-gray-300 border "
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
                             onClick={() => setActiveStep(2)}
@@ -52,7 +51,7 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
                         </Step>
 
                         <Step
-                            className="bg-gray-200 border border-darkblue"
+                            className="bg-gray-300 border "
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
                             onClick={() => setActiveStep(3)}

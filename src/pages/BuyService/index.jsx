@@ -18,7 +18,7 @@ const [valoresForms, setValoresForms] = useState({
   });
 
   return (
-      <main className="h-full pt-20 pb-4 bg-image-bene ">
+      <main className="h-full pt-16 pb-8 bg-image-bene ">
         <Status 
           valoresForms={valoresForms}
           setValoresForms={setValoresForms}

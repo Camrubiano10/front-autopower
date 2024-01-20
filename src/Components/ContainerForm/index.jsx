@@ -86,7 +86,7 @@ export default function ContainerForms({
   return (
     <section>
       <FormWindow className={" "}> 
-        <h2 className="text-3xl font-bold text-center text-cyan-800 tracking-wide underline my-6 ">
+        <h2 className="text-3xl font-bold text-center text-cyan-800 tracking-wide  my-6 border-b-2 border-cyan-100 ">
           REGISTRO
         </h2>
         
@@ -228,7 +228,7 @@ export default function ContainerForms({
 
           <div className="">
             <TextFaild
-              type="text"
+              type="number"
               name="numeroDoc"
               placeholder="Numero de documento"
               value={numeroDoc}
