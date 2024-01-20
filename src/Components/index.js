@@ -1,9 +1,6 @@
 export {default as Button} from "./Button";
 export {default as CircleButton} from "./CircleButton";
 export {default as ContainerPayment} from "./ContainerPayment";
-export {default as ContainerPriceBasic} from "./ContainerPriceBasic";
-export {default as ContainerPriceGold} from "./ContainerPriceGold";
-export {default as ContainerPricePlatinum} from "./ContainerPricePlatinum";
 export {default as ContainerForm} from "./ContainerForm";
 export {default as ContainerBill} from "./ContainerBill";
 export {default as Contrat} from "./Contract"
@@ -25,6 +22,7 @@ export {default as SwiperPlatinium} from "./SwiperPlatinium"
 export {default as TermsAndConditions} from "./TermsAndConditions";
 export {default as HeroBenefit} from "./HeroBenefit";
 export {default as BenefitCard} from "./BenefitCard";
-export{default as TableBenefit} from "./TableBenefit"
-
-
+export {default as TableBenefit} from "./TableBenefit";
+export {default as PlanTable} from "./PlanTable";
+export {default as ButtonHome} from "./ButtonHome";
+export {default as OptionPlan} from "./OptionPlan"

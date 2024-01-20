@@ -1,76 +1,59 @@
-/* eslint-disable react/prop-types */
 import Button from "../Button"
-import auto3 from "../../assets/img/auto3.png";
-import star from "../../assets/icons/star.png";
 import { useNavigate } from "react-router-dom";
 
 export default function SwiperPlatinium({ pryceForm }) {
 
-  const navigate = useNavigate()
+const navigate = useNavigate()
 
-  const handleButtonClick = () => {
+const handleButtonClick = () => {
     localStorage.setItem('plan_seleccionado', JSON.stringify({ plan: 'Platinium', precio: 30 }))
     navigate("/BuyService")
-  }
+}
 
-  return (
-    <div className="min-w-[60%] mt-16 md:mt-8 border border-white w-[90%] md:w-[70%] m-auto  rounded-2xl  bg-gradient-to-r from-gray-500 to-gray-700 md:flex">
-      <div className="flex flex-col w-full md:w-[60%]  my-4 md:my-4  ">
-        <h2 className="mb-4 py-0.5 md:py-1.5 w-[80%] md:w-[95%] text-center text-[20px] md:text-[30px] tracking-wider font-bold  bg-gradient-to-r from-blue-600 rounded-r-md text-[#FFF8E1] italic   ">
-          Del 24 al 31 de Octubre
-        </h2>
+    return (
+        <div className="min-w-[60%] w-[90%] md:w-[93%] md:h-[383px] rounded-xl md:rounded-none mx-auto md:flex md:justify-center "> 
+            <div className="flex flex-col w-full md:w-[44%]  my-4  ">
+                <h2 className="mb-2 py-2 md:py-1.5 w-[80%] md:w-[70%] text-center text-[20px] md:text-3xl tracking-widest font-bold  rounded-l-lg  italic text-gray-200
+                
+                bg-gradient-to-r from-black to-slate-50
+                ">
+                    PLAN PLATINUM
+                </h2>
+            </div>
+            <div className="mt-4 text-center md:text-right md:my-4 md:mr-15 rounded-r-lg 
+            bg-gradient-to-l from-black to-slate-50              
+            ">
+                <h2 className="font-bold text-sm md:text-base tracking-wider text-right text-gray-200 pr-6  md:mt-2">
+                    Seguro vehicular al 100%
+                </h2>
 
-        <img
-          className="w-[75%] md:w-[100%] mx-auto md:pl-8 my-1  "
-          src={auto3}
-          alt=""
-        />
 
-        <h2 className="w-[90%] mx-auto text-center text-[24px] md:text-[30px] font-bold text-blue-900 bg-gradient-to-r from-transparent from-5%  via-white via-50%  to-transparent to-95% italic  ">
-          Plan Platinium
-        </h2>
-      </div>
+                <div className="w-[80%] mx-auto mr-4  flex flex-col ">
+                    <p className=" flex justify-center text-xs md:text-xl italic md:text-gray-200">
+                        Desde
+                    </p>
+                    <h2 className="text-5xl md:text-7xl font-bold md:my-2 drop-shadow-xl tracking-widest text-white ">
+                    ${pryceForm.Platinium}
+                    </h2>
+                </div>
 
-      <div className="mt-4 text-center md:text-left md:my-4 lg:my-8 ">
-        <h3 className="text-gold font-semibold text-sm md:text-base lg:text-lg md:pl-10">
-          ¡Promociones a tu alcance!
-        </h3>
-        <h2 className="mt-1 lg:mt-4 font-bold text-white tracking-wider md:pl-10 md:text-lg lg:text-2xl">
-          Seguro vehicular al 100%
-        </h2>
-
-        <div className="w-[90%] md:pl-10 flex flex-col  my-1 md:mt-6 md:mb-6 text-white mt-3 ">
-          <p className=" flex items-start text-xs pl-14 md:pl-0 md:text-base lg:text-xl">
-            Desde
-          </p>
-          <h2 className="text-4xl md:text-5xl lg:md:text-7xl font-bold text-gold lg:my-4">
-            ${pryceForm.Platinium}
-          </h2>
-          <h2 className="flex items-start text-xs pl-14 md:pl-0 md:text-base lg:text-xl">
-            Por mes
-          </h2>
+                <div className="flex text-gray-200">
+                {/* contenedor 1 */}
+                <div className="w-2/4"> 
+                    
+                    <h2></h2>
+                </div>
+                <div className=" text-sm md:text-lg text-right text-wrap pr-6">
+                <p>◽ Completa protección para tu vehiculo eléctrico garantizando su total tranquilidad.</p>
+                <p className="mt-4">◽ En caso que tengas una falla técnica, una grua recogerá tu vehiculo.</p>
+                </div>
+                </div>
+                <div className=" flex justify-end mt-5 mr-6">
+                    <Button type="submit" text="Cotizar" variant="secondary" handleButtonClick={handleButtonClick}/>
+                </div>
+                            
+            </div>
         </div>
-
-        <div className="flex gap-4 pl-4 pr-5 mt-4 lg:mt-8 text-white items-center text-sm md:text-base lg:text-xl text-left ">
-          <img className="w-3 h-3" src={star} alt="" />
-          <p>
-            Completa protección para tu vehiculo eléctrico para un viaje
-            totalmente tranquilo.
-          </p>
-        </div>
-
-        <div className="flex gap-4 pl-4 pr-5 mt-2 lg:mt-6 md:mt-5 text-white items-center text-sm md:text-base lg:text-xl text-left ">
-          <img className="w-3 h-3" src={star} alt="" />
-          <p>
-            En caso que tengas una falla técnica, una grua recogerá tu
-            vehiculo.
-          </p>
-        </div>
-
-        <div className=" flex justify-center mt-5">
-          <Button type="submit" text="Cotizar" variant="secondary" handleButtonClick={handleButtonClick}/>
-        </div>
-      </div>
-    </div>
-  )
+        
+    )
 }

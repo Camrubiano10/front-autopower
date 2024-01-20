@@ -1,30 +1,24 @@
 import { useState } from "react";
+import { ContainerPayment, ContainerForm, ContainerBill, PaymentConfirmation, Status } from "../../Components";
 
-import {
-  ContainerPayment,
-  ContainerForm,
-  ContainerBill,
-  PaymentConfirmation,
-  Status,
-} from "../../Components";
+
 export default function BuyService() {
-  // En este componente deben tener los inputs a nivel de variable y el setValoresForm como lo pasamos ? 
- const [valoresForms, setValoresForms] = useState({
+  
+const [valoresForms, setValoresForms] = useState({
     nombre: "",
     apellido: "",
     tipoDocumento: "0",
     numeroDoc: "",
     pais: "0",
-    direccion: "",
+    // direccion: "",
     telefono: "",
     email: "",
     tipoVehiculo: "0",
-    //estos datos los tengo que pasar globales verdad
+
   });
 
   return (
-    <>
-      <main className="h-full pt-20 pb-4 bg-white-skyblue">
+      <main className="h-full pt-16 pb-8 bg-image-bene ">
         <Status 
           valoresForms={valoresForms}
           setValoresForms={setValoresForms}
@@ -34,6 +28,5 @@ export default function BuyService() {
           Step4={PaymentConfirmation}  
         /> 
       </main>
-    </>
   );
 }

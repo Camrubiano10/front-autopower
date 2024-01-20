@@ -1,17 +1,14 @@
-import { BenefitCard, HeroBenefit, TableBenefit } from "../../Components";
+import { SliderIcon, SlideQuestions, TableBenefit } from "../../Components";
 export default function Benefits() {
   return (
-    <>
-      <div className="">
-        <HeroBenefit />
-      </div>
-      <section className=" bg-gray-300">
-        <BenefitCard />
-      </section>
-
-      <div className="flex justify-center  bg-gray-300 pb-5">
+    <div className="mt-14">
+        <SliderIcon />
+      <div className="flex justify-center bg-white mt-10">
         <TableBenefit />
       </div>
-    </>
+
+    <SlideQuestions />
+
+    </div>
   );
 }

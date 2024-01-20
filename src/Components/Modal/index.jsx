@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import modalImage from "../../../public/modal.jpg";
 import modalImageResponsive from "../../../public/modal-responsive.jpg";
-import CloseButton from "../CloseButton";
 import Button from "../Button";
 
 export default function Modal({ visible, onClose }) {
@@ -13,51 +12,45 @@ export default function Modal({ visible, onClose }) {
     <>
       <section
         onClick={handleOnClose}
-        className="fixed inset-0 z-40 bg-black bg-opacity-40"
+        className="fixed inset-0 z-40 bg-black bg-opacity-50"
       >
-        <div className="fixed top-16 left-0 right-0 bottom-10 w-full md:w-3/6 h-4/6 md:h-4/6 mx-auto bg-gray-900/80 rounded-xl backdrop-blur-md flex flex-col md:flex-row gap-8 z-50">
+        <div className="fixed top-40 left-0 right-0  w-5/6 md:w-3/6 h-4/6 mx-auto 
+        bg-black bg-opacity-60 rounded-xl backdrop-blur-sm flex flex-col md:flex-row z-50  "> 
+        {/* contenedor 1  */}
           <img
             className="hidden md:block h-auto rounded-l-xl"
             src={modalImage}
           />
           <img
-            className="md:hidden w-auto rounded-t-xl"
+            className="md:hidden w-auto mx-8 rounded-lg mt-16 mb-4 border-white-500"
             src={modalImageResponsive}
           />
 
           <div className="flex flex-col md:flex-row-reverse">
-            <div className="md:mb-6 mb-2">
-              <CloseButton
-                onClick={onClose}
-                className="w-8 md:w-10 bg-white m-4 m p-3 left-5"
-              />
-            </div>
-            <div className="flex flex-col justify-center justify-items-center text-center">
-              <h3 className="text-white text-lg md:text-3xl mb-2 md:mb-5 font-bold">
-                Bienvenido a Auto Power
+            {/* contenedor 2 */}
+
+            <div className="flex flex-col ">
+
+              <h3 className="text-yellow-100 text-xl mx-auto md:mt-10 font-bold text-center p-4 
+              ">
+                ¡Bienvenido a Autopower!
               </h3>
-              <p className="hidden md:block text-white p-4 mb-2 md:mb-4 text-sm">
-                Nos complace que estés aquí, explorando las opciones para
-                proteger tu vehículo eléctrico. Sabemos que has tomado una
-                decisión consciente y sostenible al elegir un auto eléctrico, y
-                queremos asegurarnos de que recibas la mejor cobertura posible.
-                Nuestros planes de seguro están diseñados específicamente para
-                autos eléctricos, teniendo en cuenta sus características y
-                necesidades únicas. Ofrecemos una amplia gama de coberturas,
-                desde daños por accidentes hasta problemas con la batería y el
-                sistema de carga. Navega por nuestra página, conoce nuestras
-                ofertas y no dudes en contactarnos si tienes alguna pregunta.
-                Estamos aquí para ayudarte a mantener tu auto eléctrico seguro y
-                en pleno funcionamiento. ¡Esperamos poder servirte pronto!
+              <div className="hidden md:block p-2 mb-2 md:mb-6 text-xs md:text-sm font-light text-justify mx-8  md:tracking-wider text-white  ">
+              <p>
+              En Autopower nuestro objetivo es brindarle la <spam className="font-bold text-white tracking-widest ">libertad</spam> de conducir su vehículo eléctrico sin preocupaciones.</p>
+              <p className="mt-4"> Sabemos que la <spam className="font-bold text-white tracking-widest ">libertad</spam> es un valor importante para nuestros clientes, y es por eso que nos inspiramos en ella para ofrecerle los mejores seguros de vehículos eléctricos.</p> 
+              <p className="mt-4">Nuestros seguros están diseñados para proteger su vehículo eléctrico y su <spam className="font-bold text-white tracking-widest">libertad</spam> de conducirlo.
+              <p className="font-bold mt-4 text-yellow-100">¡Gracias por elegirnos! 💡⚡</p> 
               </p>
-              <p className="md:hidden text-white p-4 mb-2 md:mb-4 text-sm">
+              </div>
+              <p className="md:hidden text-white mx-8 mb-10 text-sm text-center tracking-widest">
                 Nos complace que estés aquí, explorando las opciones para
                 proteger tu vehículo eléctrico. Sabemos que has tomado una
                 decisión consciente y sostenible al elegir un auto eléctrico, y
                 queremos asegurarnos de que recibas la mejor cobertura posible.
               </p>
               <Link to="/Benefits">
-                <div className="flex justify-center">
+                <div className="flex justify-center mx-4 mb-8 ">
                   <Button type="submit" text="Beneficios" variant="secondary" />
                 </div>
               </Link>

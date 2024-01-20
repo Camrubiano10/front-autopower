@@ -5,3 +5,36 @@
 body, input, button {
     font-family: 'Poppins', sans-serif;
 }
+
+.bg-image {
+    background-image: url('../public/hero2.jpg');
+}
+
+
+.bg-image-viaje {
+    background-image: url('../public/viaje.jpg');
+}
+
+.bg-image-bene {
+    background-image: url('../public/white.jpg');
+}
+
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+    bottom: 10px;
+    height: 15px;
+    
+}
+
+.swiper-scrollbar-drag {
+    background: rgba(255, 255, 255, 0.534);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+color: rgba(255, 255, 255, 0.534); 
+font-size: 5px;
+}
+
+.swiper-pagination-bullet {
+    background-color: rgba(255, 255, 255, 0.534); 
+}

@@ -1,71 +1,43 @@
 /* eslint-disable react/prop-types */
-import TextFaild from '../TextField';
-import FormWindow from '../FormWindow'
-import Button from '../Button';
-import { useNavigate } from 'react-router-dom';
-
+import TextField from "../TextField";
+import FormWindow from "../FormWindow";
+import Button from "../Button";
+import { useNavigate } from "react-router-dom";
 
 export default function ContainerLogin() {
+  const navigate = useNavigate();
+  const handleButtonClick = () => {
+    navigate("/Profile");
+  };
 
-const navigate= useNavigate()
-    const handleButtonClick= ()=>{
-    // localStorage.setItem('plan_seleccionado', JSON.stringify({ plan: 'Basico', precio: 10 }))
-    navigate("/Profile")
-      }
+  return (
+    <FormWindow className={"md:h-[99vh] bg-image-bene "}>
+      <h2 className="text-2xl font-bold text-center my-2 bg-gradient-to-r from-indigo-600 to-cyan-400 bg-clip-text text-transparent">
+        Consulta Autopower
+      </h2>
 
-    return (
+      <div className="py-2">
+        <TextField
+          type="text"
+          name="placa"
+          placeholder="Placa"
+          className="w-full text-xl tracking-widest uppercase "
+          required
+          maxLength={6}
+        />
+      </div>
 
-        <FormWindow className={"md:h-[93vh]"}>
-            <h2 className="text-2xl font-bold text-center mt-2 mb-4 text-blue-900">Consulta Autopower</h2>
-            <hr className="bg-blue-400" />
-
-            <div className="py-2">
-                <TextFaild
-                type="text"
-                name="placa"
-                placeholder="Placa"
-                className="w-full"
-                required
-                />
-            </div>
-
-            <div className="py-2">
-                <select
-                type="text"
-                name="tipoDocumento"
-                placeholder="Tipo de documento"
-                className="border-b-2 w-full px-3 py-2  focus:outline-none focus:border-blue-500 bg-white text-gray-400"
-                >
-                <option value="0">Tipo de documento</option>
-                <option value="ced">Cedula</option>
-                <option value="tar">Tarjeta</option>
-                <option value="dni">DNI</option>
-                </select>            
-            </div>
-
-            <div className="py-2">
-            <TextFaild
-              type="number"
-              name="numeroDoc"
-              placeholder="Numero de documento"
-              className="w-full"
-              required={false}
-            />
-
-            <div className="text-center pt-6">
-                <Button
-                type="submit"
-                text="Buscar"
-                variant="primary"
-                disabled={false}
-                handleButtonClick={handleButtonClick}
-                />
-            </div>
-
-          </div>
-            
-
-        </FormWindow>
-
-    );
+      <div className="py-2">
+        <div className="text-center pt-6">
+          <Button
+            type="submit"
+            text="Buscar"
+            variant="primary"
+            disabled={false}
+            handleButtonClick={handleButtonClick}
+          />
+        </div>
+      </div>
+    </FormWindow>
+  );
 }
