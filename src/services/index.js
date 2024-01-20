@@ -1,6 +1,12 @@
-import {BASE_URL} from "./config"
+import { BASE_URL } from "./config"
 
-
+export async function create(body, url) {
+  const response = await fetch(BASE_URL + "/client/", {
+    method: "POST",
+    body: JSON.stringify(body),
+    headers: { "Content-type": "application/json" }
+  });
+}
 function getFormatDate() {
   const date = new Date();
   return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
@@ -10,7 +16,7 @@ export async function store(data) {
   try {
     const body = {
       payment_date: getFormatDate(),
-      payer_email: data.payer.email,  
+      payer_email: data.payer.email,
       payer_document_type: data.payer.identification.type,
       payer_document_number: data.payer.identification.number,
       installments: data.installments,

@@ -1,20 +1,23 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper/modules";
 import star from "../../assets/icons/star.png";
 import moneyBag from "../../assets/icons/bolsa-dinero.png";
 import Carclean from "../../assets/icons/car-clean.png";
 import Mecanism from "../../assets/icons/mecanism.png";
+
+
 export default function SlideIcon() {
   return (
     <>
       <Swiper
-        // install Swiper modules
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={50}
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
+        autoplay={{ delay: 3000 }}
+        loop={true}
       >
         <SwiperSlide>
           <div className="flex flex-col justify-center items-center">

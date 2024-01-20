@@ -3,8 +3,29 @@ import { Link } from "react-router-dom";
 import { Button, FormWindow } from "../../Components";
 import like from "../../assets/icons/like.svg";
 import star from "../../assets/icons/star.png";
+import { peticionesBack } from "../../Helpers/fetch"
 
 export default function PaymentConfirmation({ valoresForms }) {
+  const saveTable=async()=>{
+    debugger
+
+    let dataClient = {
+      name: valoresForms.nombre,
+      lastname: valoresForms.apellido,
+      document_type: valoresForms.tipoDocumento,
+      document_number: parseInt(valoresForms.numeroDoc),
+      country: valoresForms.pais,
+      phone: parseInt(valoresForms.telefono),
+      email: valoresForms.email,
+      movil_type: valoresForms.tipoVehiculo,
+      license_plate: valoresForms.placa,
+      service: 'oro'
+    }
+
+    const client = await peticionesBack('client', 'POST', valoresForms)
+    console.log(client)
+  }
+
   return (
     <FormWindow className={"border flex flex-col pb-14 md:h-[75.2vh]"}>
       <div className="bg-darkblue-select py-6 flex justify-center rounded-t-2xl">
@@ -30,6 +51,7 @@ export default function PaymentConfirmation({ valoresForms }) {
         <Link to={"/"}>
           <Button
             type="submit"
+            handleButtonClick={saveTable}
             text="Terminar"
             variant="primary"
             className="md:w-max"

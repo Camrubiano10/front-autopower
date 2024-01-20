@@ -24,6 +24,8 @@ export default function ContainerForms({
     tipoVehiculo,
     placa,
   } = valoresForms;
+
+
   const regExpCorreo = new RegExp(
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
   );

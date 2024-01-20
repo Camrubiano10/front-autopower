@@ -1,89 +1,67 @@
-/* eslint-disable react/prop-types */
 import Button from "../Button"
-import auto2 from "../../assets/img/auto2.png";
-import star from "../../assets/icons/star.png";
 import { useNavigate } from "react-router-dom";
 
-export default function SwiperBasic({ pryceForm }) {
+export default function SwiperPlatinium({ pryceForm }) {
 
-    const navigate = useNavigate()
+const navigate = useNavigate()
 
-    const handleButtonClick = () => {
-        localStorage.setItem('plan_seleccionado', JSON.stringify({ plan: 'Basico', precio: 10 }))
-        navigate("/BuyService")
-    }
+const handleButtonClick = () => {
+    localStorage.setItem('plan_seleccionado', JSON.stringify({ plan: 'Platinium', precio: 30 }))
+    navigate("/BuyService")
+}
 
     return (
 
-        <div className="min-w-[60%] w-[90%]   md:w-full md:h-[383px] rounded-xl md:rounded-none mx-auto md:flex 
-        
-        bg-image-platinium bg-cover bg-center 
-        
-        ">
+        <div className="min-w-[60%] w-[90%] md:w-[93%] md:h-[383px] rounded-xl md:rounded-none mx-auto md:flex md:justify-center "> 
 
-        {/* container principal  */}
-
-            <div className="flex flex-col w-full md:w-[52%]  my-4 md:mb-10 md:mt-4  ">
-
-                <h2 className="mb-2 py-2 md:py-1.5 w-[80%] md:w-[70%] text-center text-[20px] md:text-2xl tracking-widest font-bold  rounded-r-md  italic
+            <div className="flex flex-col w-full md:w-[44%]  my-4  ">
+                <h2 className="mb-2 py-2 md:py-1.5 w-[80%] md:w-[70%] text-center text-[20px] md:text-3xl tracking-widest font-bold  rounded-l-lg  italic text-gray-200
                 
-                bg-gradient-to-r from-white to-slate-50
+                bg-gradient-to-r from-black to-slate-50
                 ">
-                    Plan Platinium
+                    PLAN PLATINUM
                 </h2>
-
-                {/* <img
-                    className="w-[55%] md:pl-6 m-auto
-                    
-                    drop-shadow-black-2xl 
-                    
-                    "
-                    src={auto2}
-                    alt=""
-                    /> */}
-
 
             </div>
 
-            <div className="mt-4 text-center md:text-left md:my-10 md:mr-10 ">
+            <div className="mt-4 text-center md:text-right md:my-4 md:mr-15 rounded-r-lg 
+            bg-gradient-to-l from-black to-slate-50              
+            
+            ">
 
-                <h3 className="font-bold text-sm md:text-base md:pl-6">
-                    ¡Precios a tu alcance!
-                </h3>
-                
-                <h2 className="mt-1 md:mt-4 font-semibold tracking-wider md:pl-6 md:text-xl">
+                <h2 className="font-bold text-sm md:text-base tracking-wider text-right text-gray-200 pr-6  md:mt-2">
                     Seguro vehicular al 100%
                 </h2>
 
-                <div className="w-[80%] mx-auto md:ml-2 md:pl-6 my-2 md:my-8 flex flex-col ">
-                    <p className=" flex items-start text-xs pl-14 md:pl-0 md:text-xl italic">
+
+                <div className="w-[80%] mx-auto mr-8  flex flex-col ">
+                    <p className=" flex justify-center text-xs md:text-xl italic md:text-gray-200">
                         Desde
                     </p>
-                    <h2 className="text-4xl md:text-7xl font-bold md:my-2 drop-shadow-lg tracking-wider">
-                        ${pryceForm.Basic}
-                    </h2>
-                    <h2 className="flex items-start text-xs pl-14 md:pl-0 md:text-xl italic">
-                        Por mes
+                    <h2 className="text-5xl md:text-7xl font-bold md:my-2 drop-shadow-xl tracking-widest text-white ">
+                    ${pryceForm.Platinium}
                     </h2>
                 </div>
 
-                <div className="flex gap-4 pl-0 pr-5 mt-4  items-center text-sm md:text-lg text-left ">
-                    <img className="w-4 h-4" src={star} alt="" />
-                    <p>
-                        Asistencia las 24 h para su vehículo, sin preocupaciones de
-                        más.
-                    </p>
+                <div className="flex text-gray-200">
+                {/* contenedor 1 */}
+                <div className="w-2/4"> 
+                    
+                    <h2></h2>
+                </div>
+                {/* contenedor 2 */}
+
+                <div className=" text-sm md:text-lg text-right text-wrap pr-6">
+
+                <p>◽ Completa protección para tu vehiculo eléctrico garantizando su total tranquilidad.</p>
+
+
+                <p className="mt-4">◽ En caso que tengas una falla técnica, una grua recogerá tu vehiculo.</p>
                 </div>
 
-                <div className="flex gap-4 pl-0 pr-5 mt-6  items-center text-sm md:text-lg text-left ">
-                    <img className="w-4 h-4 " src={star} alt="" />
-                    <p>
-                        Revisión técnica mensualmente para el seguro de tu auto y el
-                        tuyo.
-                    </p>
                 </div>
 
-                <div className=" flex justify-center mt-5 ">
+                <div className=" flex justify-end mt-5 mr-6">
                     <Button type="submit" text="Cotizar" variant="secondary" handleButtonClick={handleButtonClick}/>
                 </div>
 

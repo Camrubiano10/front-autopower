@@ -25,6 +25,7 @@ export {default as SwiperPlatinium} from "./SwiperPlatinium"
 export {default as TermsAndConditions} from "./TermsAndConditions";
 export {default as HeroBenefit} from "./HeroBenefit";
 export {default as BenefitCard} from "./BenefitCard";
-export{default as TableBenefit} from "./TableBenefit"
+export{default as TableBenefit} from "./TableBenefit";
+export{default as PlanTable} from "./PlanTable";
 
 
