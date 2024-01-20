@@ -21,7 +21,7 @@ export default function TextField({
                 onChange={onChange}
                 onFocus={onFocus}
                 value={value}
-                className={`shadow-sm px-4 py-2 border-b-2 focus:outline-none focus:border-blue-500 text-center font-semibold text-cyan-600 ${className}`}
+                className={`shadow-sm mt-2 border-b-2 border-cyan-100 focus:outline-none focus:border-blue-500 text-center font-light text-cyan-600 uppercase ${className}`}
                 required={required} />
         </>
     )
