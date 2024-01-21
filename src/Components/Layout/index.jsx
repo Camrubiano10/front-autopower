@@ -2,6 +2,8 @@ import logo from "../../assets/logo/logo-blanco.svg";
 import isotipo from "../../assets/logo/isotipo.svg";
 import user from "../../assets/icons/user.svg";
 import { Link, Outlet } from "react-router-dom";
+
+
 export default function Layout() {
   return (
     <>

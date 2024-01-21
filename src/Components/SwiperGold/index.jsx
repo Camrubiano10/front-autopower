@@ -25,7 +25,7 @@ export default function SwiperGold({ pryceForm }) {
 
             </div>
 
-            <div className="mt-4 text-center md:text-right md:my-4 md:mr-15 rounded-r-lg 
+            <div className="my-4 text-center md:text-right md:mr-15 rounded-r-lg 
             bg-gradient-to-l from-cyan-800 to-slate-50  w-2/4   
             ">
 
@@ -36,7 +36,7 @@ export default function SwiperGold({ pryceForm }) {
                 </h2>
 
 
-                <div className="w-[80%] mx-auto mr-8  flex flex-col ">
+                <div className="w-[80%] mx-auto mr-4  flex flex-col ">
                     <p className=" flex justify-center text-xs md:text-xl italic text-white">
                         Desde
                     </p>
@@ -45,27 +45,21 @@ export default function SwiperGold({ pryceForm }) {
                     </h2>
                 </div>
 
-                <div className="flex text-white ">
-                {/* contenedor 1 */}
+                <div className="flex text-white">
                 <div className="w-2/4"> 
                     
                     <h2></h2>
                 </div>
-                {/* contenedor 2 */}
-
                 <div className=" text-sm md:text-lg text-right text-wrap pr-6">
-
                 <p>◽ Protege tu vehiculo electrico con los mejores.</p>
-
                 <p className="mt-4">◽ Contamos con todos los complementos para tu auto.</p>
                 </div>
 
                 </div>
 
-                <div className=" flex justify-end mt-5 mr-6">
+                <div className=" flex justify-end mt-5 mr-6 ">
                     <Button type="submit" text="Cotizar" variant="secondary" handleButtonClick={handleButtonClick}/>
                 </div>
-
                             
             </div>
         </div>

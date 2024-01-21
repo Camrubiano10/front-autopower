@@ -1,56 +1,61 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Stepper, Step } from "@material-tailwind/react";
+
 
 export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setValoresForms }) {
     const [activeStep, setActiveStep] = useState(0);
     const [isLastStep, setIsLastStep] = useState(false);
     const [isFirstStep, setIsFirstStep] = useState(false);
 
+
     return (
         <>
-            <div className="w-full bg-white-skyblue py-4 px-10">
-                <div className="md:w-4/12 m-auto">
+            <div className="w-full ">
+                <div className="md:w-5/12 mx-auto">
                     <Stepper
                         activeStep={activeStep}
                         isLastStep={(value) => setIsLastStep(value)}
                         isFirstStep={(value) => setIsFirstStep(value)}
-                        lineClassName="bg-darkblue"
-                        activeLineClassName="bg-darkblue"
+                        lineClassName=""
+                        activeLineClassName=""
+                                                
                     >
                         <Step
-                            className="bg-gray-200 border border-darkblue"
+                            className="bg-gray-300 border "
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
                             onClick={() => setActiveStep(0)}
+
                         >
-                            1
+                        1
                         </Step>
 
                         <Step
-                            className="bg-gray-200 border border-darkblue"
+                            className="bg-gray-300 border "
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
                             onClick={() => setActiveStep(1)}
+                            disabled={activeStep === 0}
                         >
                             2
                         </Step>
 
                         <Step
-                            className="bg-gray-200 border border-darkblue"
+                            className="bg-gray-300 border "
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
                             onClick={() => setActiveStep(2)}
+                            disabled={activeStep === 0 || activeStep === 1}
                         >
                             3
                         </Step>
 
                         <Step
-                            className="bg-gray-200 border border-darkblue"
+                            className="bg-gray-300 border "
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
                             onClick={() => setActiveStep(3)}
+                            disabled={activeStep === 0 || activeStep === 1 || activeStep === 2}
                         >
                             4
                         </Step>
