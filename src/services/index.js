@@ -1,47 +1,41 @@
-// import { BASE_URL } from "./config"
+// import React, { useEffect, useState } from 'react';
+// import { urlApi } from "./config";
 
-// export async function create(body, url) {
-//   const response = await fetch(BASE_URL + "/client/", {
-//     method: "POST",
-//     body: JSON.stringify(body),
-//     headers: { "Content-type": "application/json" }
-//   });
-// }
-// function getFormatDate() {
-//   const date = new Date();
-//   return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
-// }
+// const URL = urlApi()
+// const license = "lincense_Plate"
 
-// export async function store(data) {
-//   try {
-//     const body = {
-//       payment_date: getFormatDate(),
-//       payer_email: data.payer.email,
-//       payer_document_type: data.payer.identification.type,
-//       payer_document_number: data.payer.identification.number,
-//       installments: data.installments,
-//       issuer_id: data.issuer_id,
-//       payment_method_id: data.payment_method_id,
-//       token: data.token,
-//       status: 1,
-//       amount: data.transaction_amount,
-//       client: 1,
-//     };
+// const TuComponente = () => {
+//     const [datos, setDatos] = useState([]);
+//     const nombre = license;  // Reemplaza con el nombre que deseas buscar
 
-//     const response = await fetch(`${BASE_URL}buy/`, {
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       method: "POST",
-//       body: JSON.stringify(body),
-//     });
+//     useEffect(() => {
+//         const obtenerDatosPorNombre = async () => {
+//             try {
+//                 const response = await fetch(URL);
+//                 if (!response.ok) {
+//                     throw new Error('Error al obtener datos por nombre');
+//                 }
 
-//     const responseData = await response.json();
+//                 const data = await response.json();
+//                 setDatos(data.datos);
+//             } catch (error) {
+//                 console.error('Error de red:', error);
+//             }
+//         };
 
-//     console.log(responseData);
+//         obtenerDatosPorNombre();
+//     }, [nombre]);
 
-//     return responseData;
-//   } catch (error) {
-//     console.log(`Error: ${error.message}`);
-//   }
-// }
+//     return (
+//         <div>
+//             <h1>Datos por Nombre</h1>
+//             <ul>
+//                 {datos.map((item) => (
+//                     <li key={item.id}>{item.nombre} - {item.otro_campo}</li>
+//                 ))}
+//             </ul>
+//         </div>
+//     );
+// };
+
+// export default TuComponente;

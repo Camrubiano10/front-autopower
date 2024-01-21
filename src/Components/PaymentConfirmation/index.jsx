@@ -21,6 +21,9 @@ export default function PaymentConfirmation({ valoresForms }) {
       service: valoresForms.service
     }
 
+    
+
+
     const client = await peticionesBack('client/', 'POST', valoresForms)
     console.log(client)
   }

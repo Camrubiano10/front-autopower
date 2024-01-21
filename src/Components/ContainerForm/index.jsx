@@ -7,24 +7,19 @@ import TextFaild from "../TextField";
 
 
 
-export default function ContainerForms({
-  valoresForms,
-  setValoresForms,
-  setActiveStep,
-}) {
-
+export default function ContainerForms({ valoresForms, setValoresForms, setActiveStep }) {
 
   const {
-    nombre,
-    apellido,
-    tipoDocumento,
-    numeroDoc,
-    pais,
-    plan,
-    telefono,
+    name,
+    lastname,
+    document_type,
+    document_number,
+    country,
+    service,
+    phone,
     email,
-    tipoVehiculo,
-    placa,
+    car_type,
+    license_plate,
   } = valoresForms;
 
 
@@ -47,17 +42,16 @@ export default function ContainerForms({
   const validate = () => {
     let status = true;
     if (
-      valoresForms.nombre === "" ||
-      valoresForms.apellido === "" ||
-      valoresForms.tipoDocumento === "0" ||
-      valoresForms.numeroDoc === "" ||
-      valoresForms.pais === "0" ||
+      valoresForms.name === "" ||
+      valoresForms.lastname === "" ||
+      valoresForms.document_type === "0" ||
+      valoresForms.document_number === "" ||
+      valoresForms.country === "0" ||
       valoresForms.service === "" ||
-      valoresForms.telefono === "" ||
-      valoresForms.tipoVehiculo === "0" ||
+      valoresForms.phone === "" ||
+      valoresForms.car_type === "0" ||
       valoresForms.email === "" ||
-      valoresForms.placa === ""
-
+      valoresForms.license_plate === ""
     ) {
       status = false;
     }
@@ -94,7 +88,7 @@ export default function ContainerForms({
           REGISTRO
         </h2>
         
-        <form onSubmit={handleFormSubmit}>
+        <form onSubmit={handleFormSubmit} >
 
         {/* <div className="mb-1 gb-white">
             <select
@@ -118,15 +112,15 @@ export default function ContainerForms({
             )}
           </div> */}
 
-          <OptionPlan /> 
+          <OptionPlan handleActualizarInputs={handleActualizarInputs} service={valoresForms.service} /> 
 
           <div className="md:flex gap-8 justify-center mt-4">
           <div className="mb-1">
             <select
               type="text"
-              name="tipoVehiculo"
+              name="car_type"
               placeholder="Tipo de Vehiculo"
-              value={tipoVehiculo}
+              value={car_type}
               onChange={handleActualizarInputs}
               className="w-80 mt-2 shadow-md border-2 border-cyan-200 text-center uppercase 
               focus:outline-none focus:border-blue-500 
@@ -141,7 +135,7 @@ export default function ContainerForms({
               <option value="otros">Otro</option>
             </select>
 
-            {Mensaje && valoresForms.tipoVehiculo == "0" && (
+            {Mensaje && valoresForms.car_type == "0" && (
               <Paragraph valueParagraph="Seleccione un tipo de vehiculo." />
             )}
           </div>
@@ -149,15 +143,15 @@ export default function ContainerForms({
           <div className="mb-1">
             <TextFaild
               type="text"
-              name="placa"
+              name="license_plate"
               placeholder="Numero de placa"
-              value={placa}
+              value={license_plate}
               onChange={handleActualizarInputs}
               className="w-80 border-2 border-cyan-200 shadow-md rounded "
               required={true}
             />
 
-            {Mensaje && valoresForms.direccion == "" && (
+            {Mensaje && valoresForms.license_plate == "" && (
               <Paragraph valueParagraph="Ingrese una dirección." />
             )}
           </div>
@@ -168,18 +162,18 @@ export default function ContainerForms({
           <div className="">
             <TextFaild
               type="text"
-              name="nombre"
-              value={nombre}
+              name="name"
+              value={name}
               placeholder="Nombre"
               onChange={handleActualizarInputs}
               className="w-80 border-2 border-cyan-200 shadow-md rounded "
               required={false}
             />
-            {Mensaje && valoresForms.nombre == "" && (
+            {Mensaje && valoresForms.name == "" && (
               <Paragraph valueParagraph="Ingrese su nombre." />
             )}
-            {!regExpTexto.test(valoresForms.nombre) &&
-              valoresForms.nombre.length > 0 && (
+            {!regExpTexto.test(valoresForms.name) &&
+              valoresForms.name.length > 0 && (
                 <Paragraph valueParagraph="Ingrese un nombre válido." />
               )}
           </div>
@@ -187,20 +181,20 @@ export default function ContainerForms({
           <div className="">
             <TextFaild
               type="text"
-              name="apellido"
+              name="lastname"
               placeholder="Apellido"
-              value={apellido}
+              value={lastname}
               onChange={handleActualizarInputs}
               className="w-80 border-2 border-cyan-200 shadow-md rounded "
               required={false}
             />
 
-            {Mensaje && valoresForms.apellido == "" && (
+            {Mensaje && valoresForms.lastname == "" && (
               <Paragraph valueParagraph="Ingrese un apellido." />
             )}
 
-            {!regExpTexto.test(valoresForms.apellido) &&
-              valoresForms.apellido.length > 0 && (
+            {!regExpTexto.test(valoresForms.lastname) &&
+              valoresForms.lastname.length > 0 && (
                 <Paragraph valueParagraph="Ingrese un apellido válido." />
               )}
           </div>
@@ -210,9 +204,9 @@ export default function ContainerForms({
           <div className="">
             <select
               type="text"
-              name="tipoDocumento"
+              name="document_type"
               placeholder="Tipo de documento"
-              value={tipoDocumento}
+              value={document_type}
               onChange={handleActualizarInputs}
               className="w-80 mt-2 shadow-md border-2 border-cyan-200 text-center uppercase 
               focus:outline-none focus:border-blue-500 
@@ -225,7 +219,7 @@ export default function ContainerForms({
               <option value="dni">DNI</option>
             </select>
 
-            {Mensaje && valoresForms.tipoDocumento == "0" && (
+            {Mensaje && valoresForms.document_type == "0" && (
               <Paragraph valueParagraph="Seleccione un tipo de documento." />
             )}
           </div>
@@ -233,20 +227,20 @@ export default function ContainerForms({
           <div className="">
             <TextFaild
               type="number"
-              name="numeroDoc"
+              name="document_number"
               placeholder="Numero de documento"
-              value={numeroDoc}
+              value={document_number}
               onChange={handleActualizarInputs}
               className="w-80 border-2 border-cyan-200 shadow-md rounded "
               required={false}
             />
 
-            {Mensaje && valoresForms.numeroDoc == "" && (
+            {Mensaje && valoresForms.document_number == "" && (
               <Paragraph valueParagraph="Ingrese un número de documento." />
             )}
 
-            {!regExpNumeros.test(valoresForms.numeroDoc) &&
-              valoresForms.numeroDoc.length > 0 && (
+            {!regExpNumeros.test(valoresForms.document_number) &&
+              valoresForms.document_number?.length > 0 && (
                 <Paragraph valueParagraph="Ingrese un documento válido." />
               )}
           </div>
@@ -256,20 +250,20 @@ export default function ContainerForms({
           <div className="mb-1">
             <TextFaild
               type="tel"
-              name="telefono"
+              name="phone"
               placeholder="Numero de telefono"
-              value={telefono}
+              value={phone}
               onChange={handleActualizarInputs}
               className="w-80 border-2 border-cyan-200 shadow-md rounded "
               required={false}
             />
 
-            {Mensaje && valoresForms.telefono == "" && (
+            {Mensaje && valoresForms.phone == "" && (
               <Paragraph valueParagraph="Ingrese un número de teléfono." />
             )}
 
-            {!regExpNumeros.test(valoresForms.telefono) &&
-              valoresForms.telefono.length > 0 && (
+            {!regExpNumeros.test(valoresForms.phone) &&
+              valoresForms.phone?.length > 0 && (
                 <Paragraph valueParagraph="Ingrese un teléfono válido." />
               )}
           </div>
@@ -299,9 +293,9 @@ export default function ContainerForms({
           <div className="mb-1 gb-white">
             <select
               type="text"
-              name="pais"
+              name="country"
               placeholder="Pais"
-              value={pais}
+              value={country}
               onChange={handleActualizarInputs}
               className="w-80 mt-2 shadow-md border-2 border-cyan-200 text-center uppercase 
               focus:outline-none focus:border-blue-500 
@@ -319,7 +313,7 @@ export default function ContainerForms({
             </select>
 
 
-            {Mensaje && valoresForms.pais == "0" && (
+            {Mensaje && valoresForms.country == "0" && (
               <Paragraph valueParagraph="Ingrese un número de documento." />
             )}
           </div>
@@ -333,6 +327,7 @@ export default function ContainerForms({
               variant="primary"
               disabled={false}
             />
+            
           </div>
         </form>
       </FormWindow>

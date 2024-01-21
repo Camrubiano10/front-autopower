@@ -6,6 +6,9 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 
 export default function OptionPlan({handleActualizarInputs, service}) {
+
+    
+
 return (
     <div className="text-start flex justify-center  ">
     <FormControl className="text-cyan-500 italic ">
