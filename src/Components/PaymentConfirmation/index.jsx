@@ -7,8 +7,7 @@ import { peticionesBack } from "../../Helpers/fetch"
 
 export default function PaymentConfirmation({ valoresForms }) {
   const saveTable=async()=>{
-    debugger
-
+    
     let dataClient = {
       name: valoresForms.nombre,
       lastname: valoresForms.apellido,
@@ -19,10 +18,10 @@ export default function PaymentConfirmation({ valoresForms }) {
       email: valoresForms.email,
       movil_type: valoresForms.tipoVehiculo,
       license_plate: valoresForms.placa,
-      service: 'oro'
+      service: valoresForms.service
     }
 
-    const client = await peticionesBack('client', 'POST', valoresForms)
+    const client = await peticionesBack('client/', 'POST', valoresForms)
     console.log(client)
   }
 

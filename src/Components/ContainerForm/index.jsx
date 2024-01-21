@@ -52,7 +52,7 @@ export default function ContainerForms({
       valoresForms.tipoDocumento === "0" ||
       valoresForms.numeroDoc === "" ||
       valoresForms.pais === "0" ||
-      valoresForms.plan === "" ||
+      valoresForms.service === "" ||
       valoresForms.telefono === "" ||
       valoresForms.tipoVehiculo === "0" ||
       valoresForms.email === "" ||
@@ -85,6 +85,8 @@ export default function ContainerForms({
     }
   };
 
+
+
   return (
     <section>
       <FormWindow className={" "}> 
@@ -97,7 +99,7 @@ export default function ContainerForms({
         {/* <div className="mb-1 gb-white">
             <select
               type="text"
-              name="plan"
+              name="service"
               placeholder="Plan"
               value={plan}
               onChange={handleActualizarInputs}

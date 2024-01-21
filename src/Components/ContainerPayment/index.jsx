@@ -2,7 +2,7 @@
 // import 'react-credit-cards-2/dist/es/styles-compiled.css'
 import FormWindow from '../FormWindow';
 import { initMercadoPago, CardPayment } from '@mercadopago/sdk-react';
-import { store } from "../../services";
+// import { store } from "../../services";
 
 
 initMercadoPago(import.meta.env.VITE_MERCADOPAGO_PUBLIC_KEY)
@@ -17,7 +17,7 @@ export default function ContainerData({setActiveStep}) {
 
     const handleFormSubmit = async(formData) => {
         console.log(formData);
-        await store(formData);
+        // await store(formData);
         setActiveStep(3);
     };
 
