@@ -24,7 +24,7 @@ export default function ContainerForms({
     telefono,
     email,
     tipoVehiculo,
-    placa
+    placa,
   } = valoresForms;
 
 
@@ -56,7 +56,8 @@ export default function ContainerForms({
       valoresForms.telefono === "" ||
       valoresForms.tipoVehiculo === "0" ||
       valoresForms.email === "" ||
-      valoresForms.placa === "" 
+      valoresForms.placa === ""
+
     ) {
       status = false;
     }
@@ -73,6 +74,7 @@ export default function ContainerForms({
 
     if (validate()) {
       console.log(valoresForms);
+
       setActiveStep(1);
     } else {
       Swal.fire(
@@ -314,6 +316,7 @@ export default function ContainerForms({
               <option value="bol">Bolivia</option>
             </select>
 
+
             {Mensaje && valoresForms.pais == "0" && (
               <Paragraph valueParagraph="Ingrese un número de documento." />
             )}
@@ -335,4 +338,3 @@ export default function ContainerForms({
   );
 }
 
-// onClick={guardarForms}
