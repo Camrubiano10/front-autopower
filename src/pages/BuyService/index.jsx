@@ -5,16 +5,16 @@ import { ContainerPayment, ContainerForm, ContainerBill, PaymentConfirmation, St
 export default function BuyService() {
   
 const [valoresForms, setValoresForms] = useState({
-    nombre: "",
-    apellido: "",
-    tipoDocumento: "0",
-    numeroDoc: "",
-    pais: "0",
-
-    telefono: "",
+    name: "",
+    lastname: "",
+    document_type: "0",
+    document_number: "",
+    country: "0",
+    phone: "",
     email: "",
-    tipoVehiculo: "0",
-
+    car_type: "0",
+    license_plate:"",
+    service: ""
   });
 
   return (
