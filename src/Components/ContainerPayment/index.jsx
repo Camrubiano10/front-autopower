@@ -1,37 +1,54 @@
-/* eslint-disable react/prop-types */
-// import 'react-credit-cards-2/dist/es/styles-compiled.css'
 import FormWindow from '../FormWindow';
 import { initMercadoPago, CardPayment } from '@mercadopago/sdk-react';
-// import { store } from "../../services";
 
-
-initMercadoPago(import.meta.env.VITE_MERCADOPAGO_PUBLIC_KEY)
+initMercadoPago(import.meta.env.VITE_MERCADOPAGO_PUBLIC_KEY, {locale: 'es-PE'})
 
 console.log(initMercadoPago)
 
 export default function ContainerData({setActiveStep}) {
 
+    const planSeleccionado = JSON.parse(
+        localStorage.getItem("plan_seleccionado")
+    );
+
     const initialization = {
-        amount: 500,
+        amount: planSeleccionado.precio,
     }
 
     const handleFormSubmit = async(formData) => {
         console.log(formData);
-        // await store(formData);
         setActiveStep(3);
     };
 
-
-
     return (
-
-        <FormWindow>
-            <h2 className="text-2xl font-bold text-center mt-2 mb-4 text-blue-900">Realiza tu pago</h2>
-            <hr className="bg-blue-400" />
-
-            <CardPayment initialization={initialization} onSubmit={handleFormSubmit}/>
-
-        </FormWindow>
-
+    <FormWindow>
+        <h2 className="text-3xl font-bold text-center text-cyan-800 tracking-wide  mt-6 mb-3 border-b-2 border-cyan-100 uppercase ">confirmacion de compra</h2>
+    <div className="overflow-auto">
+        <CardPayment initialization={initialization} onSubmit={handleFormSubmit}
+        customization={{
+            paymentMethods:{
+                maxInstallments: 1,
+            },
+            visual:{
+                hideFormTitle: true,
+                // hidePaymentButton: true,
+                style:{
+                    theme: 'bootstrap',
+                    customVariables:{
+                        textPrimaryColor: '#0E7490',
+                        formPadding: '1px',
+                        fontSizeExtraSmall: "1px",
+                        fontSizeSmall: "7px",
+                        fontSizeMedium: '10px',
+                        fontSizeLarge: '10px',
+                        fontSizeExtraLarge: "",
+                        
+                    }
+                }
+            }
+        }}
+        />
+    </div>
+    </FormWindow>
     );
 }

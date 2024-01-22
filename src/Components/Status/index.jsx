@@ -18,7 +18,7 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
                         isFirstStep={(value) => setIsFirstStep(value)}
                         lineClassName=""
                         activeLineClassName=""
-                                                
+                        
                     >
                         <Step
                             className="bg-gray-300 border "
@@ -44,7 +44,7 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
                             className="bg-gray-300 border "
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
-                            // onClick={() => setActiveStep(2)}
+                            onClick={() => setActiveStep(2)}
                             
                         >
                             3
@@ -54,7 +54,7 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
                             className="bg-gray-300 border "
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
-                            // onClick={() => setActiveStep(3)}
+                            onClick={() => setActiveStep(3)}
                             
                         >
                             4
