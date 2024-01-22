@@ -30,7 +30,7 @@ export default function Home() {
 
       <main className="bg-white mt-8  ">
         <h2
-          className="text-lg lg:text-5xl text-center mb-12 font-bold tracking-widest px-20 
+          className="text-lg lg:text-5xl text-center mb-12 font-bold tracking-widest px-20 animate-pulse
       bg-gradient-to-r from-cyan-800 to-teal-100 bg-clip-text text-transparent "
         >
           Descubre el significado de LIBERTAD con nuestros planes mensuales:

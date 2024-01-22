@@ -19,7 +19,7 @@ export default function SlideQuestions() {
         bg-gradient-to-r from-blue-200 to-blue-50 
         ">
 
-          <h2 className="text-xs md:text-lg font-semibold text-left md:text-center">
+          <h2 className="text-xs md:text-lg font-semibold text-left md:text-center animate-pulse">
           ¿El seguro para autos eléctricos es más caro que para vehículos tradicionales?
           </h2>
         </div>
@@ -52,7 +52,7 @@ export default function SlideQuestions() {
         bg-gradient-to-r from-blue-200 to-blue-50 
         ">
 
-          <h2 className="text-xs md:text-lg font-semibold text-left md:text-center">
+          <h2 className="text-xs md:text-lg font-semibold text-left md:text-center animate-pulse">
           ¿La poliza tiene proteccion a intentos de hurto?
           </h2>
         </div>
@@ -81,7 +81,7 @@ export default function SlideQuestions() {
         bg-gradient-to-r from-blue-200 to-blue-50 
         ">
 
-          <h2 className="text-xs md:text-lg font-semibold text-left md:text-center">
+          <h2 className="text-xs md:text-lg font-semibold text-left md:text-center animate-pulse">
           ¿Ofrecen descuentos especiales para propietarios de autos eléctricos?
           </h2>
         </div>

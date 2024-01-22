@@ -45,10 +45,10 @@ export default function Contact() {
             Redes Sociales:
           </p>
           <p className="flex justify-center text-xl text-cyan-900 ">AutoPower</p>
-          <div className="flex justify-center w-10 mx-auto gap-3 mt-2">
-            <img className="flex" src={facebook} alt="" />
-            <img className="flex" src={instagram} alt="" />
-            <img src={x} alt="" />
+          <div className="flex justify-center gap-6 w-10 mx-auto gap-3 mt-2">
+            <img className="flex animate-pulse" src={facebook} alt="" />
+            <img className="flex animate-pulse" src={instagram} alt="" />
+            <img className="animate-pulse" src={x} alt="" />
           </div>
         </div>
       </div>

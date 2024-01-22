@@ -26,15 +26,17 @@ export default function PaymentConfirmation({ valoresForms }) {
         <img className="w-8 py-5 hover:animate-spin cursor-pointer  
         group-hover:block animate-spin cursor-pointer
         " src={star} />
-        <h2 className="text-3xl font-bold ">¡Felicidades!</h2>
+        <h2 className="text-3xl font-bold 
+        bg-gradient-to-r from-blue-800 to-blue-500 bg-clip-text text-transparent
+        ">¡Felicidades!</h2>
         <h3
           id="nameCongratulation"
-          className="text-lg font-bold py-2 uppercase " >
+          className="text-lg font-bold py-2 uppercase tracking-widest " >
           {valoresForms.name} {valoresForms.lastname}
         </h3>
 
         <p className=" italic border-2 border-white">
-          Ahora formas parte de la familia Autopower.
+          Ahora formas parte de la familia <span className="text-blue-800 font-bold not-italic"> Autopower 💡</span>.
         </p>
 
         <div className="w-full ">

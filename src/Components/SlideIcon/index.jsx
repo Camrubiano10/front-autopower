@@ -24,7 +24,7 @@ export default function SlideIcon() {
         slidesPerView={1}
         navigation={true}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 1500 }}
         loop={true}
       >
       

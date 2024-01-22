@@ -124,10 +124,8 @@ return (
                 <IconButton
                     aria-label="expand row"
                     size="small"
-                    onClick={() => {
-                        if (index !== rows.length - 1) {
-                        handleClick(index);
-                        }
+                    onClick={() => {handleClick(index)
+
                         }}
                 >
                     <ExpandMoreIcon />
