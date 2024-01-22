@@ -25,7 +25,7 @@ export default function Home() {
       </div>
 
       <div className=" bg-white">
-        <BenefitCard />
+        <BenefitCard  />
       </div>
 
       <main className="bg-white mt-8  ">

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import { Button, FormWindow } from "../../Components";
 import like from "../../assets/icons/like.svg";
@@ -9,54 +8,47 @@ export default function PaymentConfirmation({ valoresForms }) {
 
   const saveTable=async()=>{
     
-    let dataClient = {
-      name: valoresForms.nombre,
-      lastname: valoresForms.apellido,
-      document_type: valoresForms.tipoDocumento,
-      document_number: parseInt(valoresForms.numeroDoc),
-      country: valoresForms.pais,
-      phone: parseInt(valoresForms.telefono),
-      email: valoresForms.email,
-      movil_type: valoresForms.tipoVehiculo,
-      license_plate: valoresForms.placa,
-      service: valoresForms.service
-    }
-    
     const client = await peticionesBack('client/', 'POST', valoresForms)
     console.log(client)
-  }
+  };
 
   return (
     <FormWindow >
-      <div className="bg-darkblue-select py-6 flex justify-center rounded-t-2xl">
-        <img className="md:w-50 w-25 p-4" src={like} />
+      <div className="mt-6 py-8 flex justify-center rounded-2xl 
+      group
+      bg-gradient-to-r from-indigo-600 to-cyan-400
+      ">
+        <img className="md:w-50 w-25 p-4 cursor-pointer " src={like} />
       </div>
       {/* 1 */}
 
-      <div className="p-6 flex flex-col items-center justify-center text-center">
-        <img className="w-8 py-5" src={star} />
-        <h2 className="text-3xl font-bold">Gracias!</h2>
+      <div className="flex flex-col items-center justify-center text-center  ">
+        <img className="w-8 py-5 hover:animate-spin cursor-pointer  
+        group-hover:block animate-spin cursor-pointer
+        " src={star} />
+        <h2 className="text-3xl font-bold ">¡Felicidades!</h2>
         <h3
           id="nameCongratulation"
-          className="text-lg font-bold py-2 uppercase"
-        >
-          {valoresForms.name}
+          className="text-lg font-bold py-2 uppercase " >
+          {valoresForms.name} {valoresForms.lastname}
         </h3>
 
-        <p className="pb-4">
-          En breve te llamaremos para completar el registro de tu auto, los
-          detalles del contrato se enviaron a tu correo electrónico.
+        <p className=" italic border-2 border-white">
+          Ahora formas parte de la familia Autopower.
         </p>
 
+        <div className="w-full ">
         <Link to={"/"}>
+          
           <Button
             type="submit"
             handleButtonClick={saveTable}
-            text="Terminar"
+            text="Aceptar"
             variant="primary"
-            className="md:w-max"
+            className=" mt-2 " 
           />
         </Link>
+      </div>
       </div>
     </FormWindow>
   );

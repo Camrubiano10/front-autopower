@@ -36,7 +36,7 @@ export default function ButtonHome(){
         <h2
         className="text-lg lg:text-2xl text-center mb-12 font-bold tracking-widest px-20 
         bg-gradient-to-l from-indigo-400 to-cyan-400 bg-clip-text text-transparent mt-12
-        cursor-pointer
+        cursor-pointer animate-bounce
         "
         >
         >>> Descubre más de nuestros beneficios

@@ -4,7 +4,7 @@ import technology from "../../assets/icons/technology.png";
 
 export default function BenefitCard() {
   return (
-    <div className="container mx-auto px-4 mb-6">
+    <div className="container mx-auto px-4 mb-6 ">
 
       <div className="flex flex-wrap md:flex-nowrap md:gap-7 ">
         {/* CARD1  */}
