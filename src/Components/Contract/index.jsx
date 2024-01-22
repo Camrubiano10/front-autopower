@@ -9,6 +9,7 @@ export default function Contract() {
       <span
         onClick={() => setOpen(true)}
         className="uppercase font-semibold cursor-pointer text-sm w-80 border-2 border-cyan-200 shadow-md rounded px-12 py-1
+        hover:bg-skyblue-select hover:shadow-lg hover:shadow-cyan-200/50 hover:text-white 
         "
 
       >
@@ -17,13 +18,13 @@ export default function Contract() {
       <Dialog
         open={open}
         onClose={() => setOpen(false)}
-        className="relative z-50"
+        className="relative z-50 "
       >
-        <div className="fixed inset-0 bg-black/30" aria-hidden="true">
+        <div className="fixed inset-0 bg-black/30 " aria-hidden="true">
           <div className="fixed inset-0 w-screen overflow-y-auto">
-            <div className="flex  items-center justify-center p-4">
-              <Dialog.Panel className="mx-auto px-4 max-w-sm rounded bg-white">
-                <Dialog.Title className="my-4 text-center font-bold text-blue-400 uppercase">
+            <div className="flex items-center justify-center p-4 ">
+              <Dialog.Panel className=" md:mt-12 mx-auto px-4 max-w-sm md:max-w-5xl  rounded-xl bg-white ">
+                <Dialog.Title className="mt-2 mb-1 text-center font-bold text-blue-400 uppercase">
                   Contrato de Seguro para Vehículos Eléctricos
                 </Dialog.Title>
 
