@@ -100,11 +100,11 @@ export default function ContainerForms({ valoresForms, setValoresForms, setActiv
               placeholder="Tipo de Vehiculo"
               value={car_type}
               onChange={handleActualizarInputs}
-              className="w-80 mt-2 shadow-md border-2 border-cyan-200 text-center uppercase 
+              className="w-80 mt-2 shadow-md border-2 border-cyan-200 text-center uppercase text-gray-500
               focus:outline-none focus:border-blue-500 
-              font-semibold text-blue-600 block rounded "
+              font-semibold block rounded "
             >
-              <option className="text-gray-300" value="0">
+              <option className="" value="0">
                 Tipo de Vehículo
               </option>
               <option value="camioneta">Camioneta</option>
@@ -186,9 +186,9 @@ export default function ContainerForms({ valoresForms, setValoresForms, setActiv
               placeholder="Tipo de documento"
               value={document_type}
               onChange={handleActualizarInputs}
-              className="w-80 mt-2 shadow-md border-2 border-cyan-200 text-center uppercase 
+              className="w-80 mt-2 shadow-md border-2 border-cyan-200 text-center uppercase text-gray-500
               focus:outline-none focus:border-blue-500 
-              font-semibold text-blue-600 block rounded  
+              font-semibold block rounded  
               "
             >
               <option value="0">Tipo de documento</option>
@@ -275,9 +275,9 @@ export default function ContainerForms({ valoresForms, setValoresForms, setActiv
               placeholder="Pais"
               value={country}
               onChange={handleActualizarInputs}
-              className="w-80 mt-2 shadow-md border-2 border-cyan-200 text-center uppercase 
+              className="w-80 mt-2 shadow-md border-2 border-cyan-200 text-center uppercase text-gray-500
               focus:outline-none focus:border-blue-500 
-              font-semibold text-blue-600 block rounded  
+              font-semibold block rounded   
               "
             >
               <option value="0">País</option>

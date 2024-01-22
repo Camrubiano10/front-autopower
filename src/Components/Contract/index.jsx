@@ -8,7 +8,9 @@ export default function Contract() {
     <>
       <span
         onClick={() => setOpen(true)}
-        className="underline font-semibold text-blue-400 cursor-pointer text-lg"
+        className="uppercase font-semibold cursor-pointer text-sm w-80 border-2 border-cyan-200 shadow-md rounded px-12 py-1
+        "
+
       >
         Contrato
       </span>
@@ -19,7 +21,7 @@ export default function Contract() {
       >
         <div className="fixed inset-0 bg-black/30" aria-hidden="true">
           <div className="fixed inset-0 w-screen overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4">
+            <div className="flex  items-center justify-center p-4">
               <Dialog.Panel className="mx-auto px-4 max-w-sm rounded bg-white">
                 <Dialog.Title className="my-4 text-center font-bold text-blue-400 uppercase">
                   Contrato de Seguro para Vehículos Eléctricos

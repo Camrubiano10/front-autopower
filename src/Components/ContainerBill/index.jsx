@@ -22,51 +22,82 @@ export default function ContainerBill({ setActiveStep }) {
   let priceTotal = igv + planSeleccionado.precio;
 
   return (
-    <FormWindow className={"md:h-[75.2vh]"}>
+    <FormWindow className={""}>
       <form onSubmit={handleFormSubmit}>
-        <h2 className="text-2xl font-bold text-center mt-2 mb-4">
-          Contrato de plan
-        </h2>
-        <hr />
+      <h2 className="text-3xl font-bold text-center text-cyan-800 tracking-wide  my-6 border-b-2 border-cyan-100 uppercase ">
+      RESUMEN PLAN {planSeleccionado.plan}
+      </h2>
 
-        <div className="flex justify-center">
-          <h1 className="text-2xl font-bold text-center text-sky-400 mt-8 mb-4">
-            {planSeleccionado.plan}
-          </h1>
-        </div>
+    <div className="flex justify-between  ">
+    {/* contenedor 1  */}
+    <div className=" w-1/2 ">
 
-        <div className="flex mb-4">
-          <div className="w-1/3 mx-auto  h-10">
+
+      <div className="flex mb-4 justify-between">
+        <div className="ml-8 mt-3 font-bold text-cyan-700 uppercase tracking-wider ">
             <p className=" ">Vigencia:</p>
-          </div>
-          <div className="w-1/3  mx-auto h-10">
-            <p className=" font-bold ">Mensual</p>
-          </div>
         </div>
+        <div className="mt-3  mr-8 font-semibold  uppercase ">
+            <p className=" ">Mensual</p>
+        </div>        
+      </div>
 
-        <div className="flex mb-4">
-          <div className="w-1/3 mx-auto  h-10">
+        <div className="flex mb-4 justify-between">
+          <div className="ml-8 mt-3 font-bold text-cyan-700 uppercase tracking-wider">
             <p className=" ">Fecha de Inicio:</p>
           </div>
-          <div className="w-1/3  mx-auto h-10">
-            <p className="font-bold">{today.toLocaleDateString()}</p>
+          <div className="mt-3  mr-8 font-semibold  uppercase">
+            <p className=" ">{today.toLocaleDateString()}</p>
           </div>
         </div>
 
-        <div className="flex mb-4">
-          <div className="w-1/3 mx-auto  h-10">
+        <div className="flex mb-4 justify-between">
+          <div className="ml-8 mt-3 font-bold text-cyan-700 uppercase tracking-wider ">
             <p className=" ">Fecha fin:</p>
           </div>
-          <div className="w-1/3  mx-auto h-10">
-            <p className="font-bold">{datePeriodo.toLocaleDateString()}</p>
+          <div className="mt-3  mr-8 font-semibold  uppercase ">
+            <p className="">{datePeriodo.toLocaleDateString()}</p>
           </div>
         </div>
 
-        <div className="flex mb-4">
-          <div className="w-1/3 mx-auto  h-10">
-            <p className=" ">Contrato:</p>
+        <div className="flex mb-4 mt-5 justify-between">
+          <div className="ml-8 mt-3 font-bold text-cyan-700 uppercase tracking-wider ">
+            <p className="">Tarifa Mensual:</p>
           </div>
-          <div className="w-1/3  mx-auto h-10">
+          <div className="mt-3  mr-8 font-semibold  uppercase">
+            <p className="">${planSeleccionado.precio}</p>
+          </div>
+        </div>
+
+        <div className="flex mb-4 justify-between">
+          <div className="ml-8 mt-3 font-bold text-cyan-700 uppercase tracking-wider ">
+            <p className="">IGV:</p>
+          </div>
+          <div className="mt-3  mr-8 font-semibold  uppercase">
+            <p className="">18%</p>
+          </div>
+        </div>
+
+
+        <div className="flex mb-4 justify-between">
+          <div className="ml-8 mt-3 font-bold text-cyan-700 uppercase tracking-wider ">
+            <p className="">Pago total:</p>
+          </div>
+          <div className="mt-3  mr-8 font-semibold  uppercase ">
+            <p className="">${priceTotal}</p>
+          </div>
+        </div>
+
+      </div>
+
+      {/* contenedor 2 */}
+    <div className=" w-1/2 ">
+
+      <div className="h-[280px] border-4 border-cyan-100 bg-image-login bg-cover mx-8 rounded-lg mt-3 ">
+
+      </div>
+
+          <div className="text-center mt-3 border-2 border-white h-1/7">
             <p className="text-blue-700">
               <a href="#" className="text-xs">
                 <span>
@@ -75,38 +106,12 @@ export default function ContainerBill({ setActiveStep }) {
               </a>
             </p>
           </div>
-        </div>
 
-        <hr />
+    </div>
 
-        <div className="flex mb-4 mt-5">
-          <div className="w-1/3 mx-auto  h-10">
-            <p className="">Tarifa Mensual:</p>
-          </div>
-          <div className="w-1/3  mx-auto h-10">
-            <p className="font-bold">${planSeleccionado.precio}</p>
-          </div>
-        </div>
+  </div>
 
-        <div className="flex mb-4">
-          <div className="w-1/3 mx-auto  h-10">
-            <p className="">IGV:</p>
-          </div>
-          <div className="w-1/3  mx-auto h-10">
-            <p className="font-bold">18%</p>
-          </div>
-        </div>
-
-        <div className="flex mb-4">
-          <div className="w-1/3 mx-auto h-10">
-            <p className="">Pago total:</p>
-          </div>
-          <div className="w-1/3  mx-auto h-12">
-            <p className="font-bold">${priceTotal}</p>
-          </div>
-        </div>
-
-        <div className="flex justify-center mb-4">
+        <div className="flex justify-center mt-7">
           <Button type="submit" text="Siguiente" variant="primary" />
         </div>
       </form>

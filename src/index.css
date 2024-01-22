@@ -19,6 +19,10 @@ body, input, button {
     background-image: url('../public/white.jpg');
 }
 
+.bg-image-login {
+    background-image: url('../public/login.jpg');
+}
+
 .swiper-scrollbar.swiper-scrollbar-horizontal {
     bottom: 10px;
     height: 15px;
