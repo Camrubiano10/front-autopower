@@ -90,28 +90,6 @@ export default function ContainerForms({ valoresForms, setValoresForms, setActiv
         
         <form onSubmit={handleFormSubmit} >
 
-        {/* <div className="mb-1 gb-white">
-            <select
-              type="text"
-              name="service"
-              placeholder="Plan"
-              value={plan}
-              onChange={handleActualizarInputs}
-              className="w-80 border mt-2 border-cyan-100 shadow-sm text-center uppercase
-              focus:outline-none focus:border-blue-500 
-              font-semibold text-cyan-600"
-            >
-              <option value="0">Seleccione su plan</option>
-              <option value="per">Plan Basic</option>
-              <option value="col">Plan Gold</option>
-              <option value="arg">Plan Platinum</option>
-            </select>
-
-            {Mensaje && valoresForms.pais == "0" && (
-              <Paragraph valueParagraph="Ingrese un número de documento." />
-            )}
-          </div> */}
-
           <OptionPlan handleActualizarInputs={handleActualizarInputs} service={valoresForms.service} /> 
 
           <div className="md:flex gap-8 justify-center mt-4">
