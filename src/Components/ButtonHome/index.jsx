@@ -11,7 +11,7 @@ export default function ButtonHome(){
 
     return(
         <div>  
-        <div className="flex justify-center min-w-[650px] gap-24 max-w-[1250px] mx-auto mt-8 mb-4 px-24 mb-8 animate-bounce
+        <div className="flex justify-center md:min-w-[650px] gap-24 max-w-[1250px] mx-auto mt-8 px-24 md:mb-8 mb-4 animate-bounce
         
         ">
         <Button type="add" text="Cotiza tu plan aqui" variant="add" handleButtonClick={handleButtonClick1}
@@ -20,8 +20,8 @@ export default function ButtonHome(){
         </div>
         <Link to="/Benefits">
         <h2
-        className="text-lg lg:text-2xl text-center mb-12 font-bold tracking-widest px-20 
-        bg-gradient-to-l from-indigo-400 to-cyan-400 bg-clip-text text-transparent mt-12
+        className="text-lg lg:text-2xl text-center mb-4 md:mb-12 font-bold tracking-widest px-20 
+        bg-gradient-to-l from-indigo-400 to-cyan-400 bg-clip-text text-transparent md:mt-12
         cursor-pointer 
         "
         >

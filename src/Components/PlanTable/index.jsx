@@ -101,7 +101,7 @@ const handleClick = (index) => {
 
 return (
     <TableContainer>
-    <Table className="mx-auto min-w-[650px] max-w-[1250px] shadow-xl ">
+    <Table className="px-12  md:mx-auto md:min-w-[650px] md:max-w-[1250px] shadow-xl ">
         <TableHead
         sx={{ "& th": { fontWeight: "bold", color: "white", fontSize: 18, paddingBottom: 1.5, paddingTop: 1.5 } }}
         className="bg-gradient-to-r from-blue-800 to-cyan-200  "

@@ -17,7 +17,7 @@ export default function ContainerProfile() {
         Cliente asegurado
         </h2>
 
-        <div className="md:grid md:grid-cols-3 md:grid-rows-7 border-2 border-cyan-500 rounded-xl uppercase ">
+        <div className="md:grid md:grid-cols-3 md:grid-rows-8 border-2 border-cyan-500 rounded-xl uppercase ">
         <div
             className="hidden invisible md:visible md:row-span-5 md:border-r-2 border-b-2 border-cyan-500  text-2xl font-bold md:flex md:items-center md:justify-center md:tracking-widest 
                     md:bg-gradient-to-r from-indigo-600 to-cyan-400 bg-clip-text text-transparent 
@@ -58,7 +58,7 @@ export default function ContainerProfile() {
         </div>
 
         <div
-            className="hidden invisible md:visible md:row-span-2 border-r-2 border-cyan-500  font-bold md:flex md:items-center justify-center tracking-widest 
+            className="hidden invisible md:visible md:row-span-3 border-r-2 border-cyan-500  font-bold md:flex md:items-center justify-center tracking-widest 
                     bg-gradient-to-r from-indigo-600 to-cyan-400 bg-clip-text text-transparent "
         >
             <p className="py-3 text-center">Seguro AutoPower</p>
@@ -72,11 +72,18 @@ export default function ContainerProfile() {
             <p>{data.service}</p>
         </div>
 
-        <div className="border-cyan-500 pl-4 py-1 font-semibold md:font-bold text-cyan-700 tracking-wider border-b-2 md:border-b-0 border-cyan-500 ">
-            <p>Vigencia desde:</p>
+        <div className="pl-4 py-1 font-semibold md:font-bold text-cyan-700 tracking-wider  border-b-2 border-cyan-500  ">
+            <p>Inico de cobertura:</p>
         </div>
-        <div className="border-cyan-500 py-2 md:py-1 font-normal md:font-semibold text-center md:text-start">
-            <p className="">{data.created_at}</p>
+
+        <div className="border-cyan-500 py-2 md:py-1 font-normal md:font-semibold text-center md:text-start border-b-2 ">
+            <p className="">{data.date_start}</p>
+        </div>
+        <div className="border-cyan-500 pl-4 py-1 font-semibold md:font-bold text-cyan-700 tracking-wider border-b-2 md:border-b-0 border-cyan-500 ">
+            <p>Termino de cobertura:</p>
+        </div>
+        <div className="border-cyan-500 py-1 md:py-1 font-normal md:font-semibold text-center md:text-start my-auto">
+            <p className="">{data.date_end}</p>
         </div>
         </div>
 

@@ -20,31 +20,38 @@ export default function Home() {
 
   return (
     <>
-      <div className="mt-14">
+      <div className="mt-14 hidden md:block">
         <HeroBenefit />
       </div>
 
-      <div className=" bg-white">
+      <div className=" hidden md:block">
         <BenefitCard  />
       </div>
 
       <main className="bg-white mt-8  ">
         <h2
           className="text-lg lg:text-5xl text-center mb-12 font-bold tracking-widest px-20 animate-pulse
-      bg-gradient-to-r from-cyan-800 to-teal-100 bg-clip-text text-transparent "
+      bg-gradient-to-r from-cyan-800 to-teal-100 bg-clip-text text-transparent hidden md:block"
         >
           Descubre el significado de LIBERTAD con nuestros planes mensuales:
+        </h2>
+
+        <h2
+          className="text-lg lg:text-5xl text-center mb-4 font-bold tracking-widest px-20 animate-pulse
+          bg-gradient-to-r from-indigo-600 to-cyan-400 bg-clip-text text-transparent md:hidden block mt-12"
+        >
+          Descubre nuestros planes mensuales:
         </h2>
 
         <Hero pryceForm={pryceForm} />
 
         <h2
-          className="text-lg md:text-4xl text-center mt-12 mb-8 font-bold tracking-wider px-20 
-      bg-gradient-to-r from-indigo-600 to-cyan-400 bg-clip-text text-transparent "
+          className="text-lg md:text-4xl text-center mt-8 md:mt-12 mb-4 font-bold tracking-wider px-20
+          bg-gradient-to-r from-cyan-800 to-teal-100 bg-clip-text text-transparent  "
         >
           Conoce nuestros planes:
         </h2>
-        <PlanTable />
+        <PlanTable  />
         <ButtonHome />
 
         </main>

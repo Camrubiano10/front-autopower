@@ -7,7 +7,7 @@ export default function Hero({pryceForm}) {
 
   return (
     <>
-    <div className="bg-image bg-cover bg-bottom colorScroll">
+    <div className="bg-image md:bg-cover  md:bg-bottom  ">
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={0}
