@@ -1,5 +1,5 @@
 import aboutImage from "../../../public/aboutImage.jpg";
-export default function About() {
+export default function about() {
   return (
     <>
       <div className="md:min-h-min md:py-[6.34%] flex flex-wrap items-center mt-16 md:mt-6 border-2 border-white bg-image-bene">

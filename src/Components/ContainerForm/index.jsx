@@ -69,7 +69,7 @@ export default function ContainerForms({ valoresForms, setValoresForms, setActiv
     e.preventDefault();
 
     if (validate()) {
-      console.log(valoresForms);
+      
 
       setActiveStep(1);
     } else {

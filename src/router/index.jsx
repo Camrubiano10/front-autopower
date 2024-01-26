@@ -7,12 +7,12 @@ export default function Router() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/BuyService" element={<BuyService />} />
-          <Route path="/Benefits" element={<Benefits />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Profile" element={<Profile />} />
+          <Route path="/buyService" element={<BuyService />} />
+          <Route path="/benefits" element={<Benefits />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/consulta-placa" element={<Login />} />
+          <Route path="/profile" element={<Profile />} />
         </Route>
       </Routes>
     </BrowserRouter>

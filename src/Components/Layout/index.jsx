@@ -14,18 +14,18 @@ export default function Layout() {
             <img className="md:w-36 w-32 ml-6 hover:scale-95" src={logo} />
           </Link>
           <ul className="hidden md:flex items-center pr-10 text-base font-semibold cursor-pointer">
-            <Link to="/Benefits">
+            <Link to="/benefits">
               <li className="hover:bg-darkblue-select py-4 px-6 ">BENEFICIOS</li>
             </Link>
-            <Link to="/About">
+            <Link to="/about">
               <li className="hover:bg-darkblue-select py-4 px-6">
                 SOBRE NOSOTROS
               </li>
             </Link>
-            <Link to="/Contact">
+            <Link to="/contact">
               <li className="hover:bg-darkblue-select py-4 px-6">CONTACTO</li>
             </Link>
-            <Link to="/login">
+            <Link to="/consulta-placa">
             <img className="w-8 ml-5 hover:scale-125 " src={user} />
           </Link>
           </ul>
@@ -35,23 +35,27 @@ export default function Layout() {
             <div className="w-6 h-0.5 bg-white"></div>
             <div className="absolute top-0 right-full h-screen w-8/12 bg-darkblue border opacity-20 backdrop-blur-md group-focus:right-0 group-focus:opacity-100 transition-all duration-300 z-30">
               <ul>
-                <Link to="/Benefits" >
+                <Link to="/benefits" >
                   <li className="hover:bg-darkblue-select py-4 px-6 w-full focus:text-blue-500">
                     BENEFICIOS
                   </li>
                 </Link>
 
-                <Link to="/About" >
+                <Link to="/about" >
                   <li className="hover:bg-darkblue-select py-4 px-6 w-full focus:text-blue-500">
                     SOBRE NOSOTROS
                   </li>
                 </Link>
-                <Link to="/Contact">
+                <Link to="/contact">
                   <li className="hover:bg-darkblue-select py-4 px-6 w-full focus:text-blue-500">
                     CONTACTO
                   </li>
                 </Link>
-                
+                <Link to="/consulta-placa">
+                  <li className="hover:bg-darkblue-select py-4 px-6 w-full focus:text-blue-500">
+                    CONSULTA PLACA
+                  </li>
+                </Link>
               </ul>
             </div>
           </button>

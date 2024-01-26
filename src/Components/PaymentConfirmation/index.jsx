@@ -9,7 +9,7 @@ export default function PaymentConfirmation({ valoresForms }) {
   const saveTable=async()=>{
     
     const client = await peticionesBack('client/', 'POST', valoresForms)
-    console.log(client)
+    
   };
 
   return (

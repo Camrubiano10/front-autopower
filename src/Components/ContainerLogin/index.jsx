@@ -1,87 +1,65 @@
-/* eslint-disable react/prop-types */
+import { useForm } from "../../hooks/useForm";
+import { useNavigate } from "react-router-dom";
 import TextField from "../TextField";
 import Button from "../Button";
-import { useNavigate } from "react-router-dom";
-import { read } from "../../Helpers/fetch"
-import { useState, useEffect } from "react";
+import { getClientByLicense } from "../../hooks/useForm"
+import { useClientStore } from "../../store/storeLicense"
 
 export default function ContainerLogin() {
   const navigate = useNavigate();
+  const {setData} = useClientStore();
 
-  const handleButtonClick = () => {
-    navigate("/Profile");
+  const { errors, values, handleInputChange, validateIfValuesHasEmpty } = useForm();
+  
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    try{
+      const data = await getClientByLicense(values.placa);
+      setData(data);
+      navigate("/profile");
+
+    }catch(error){
+
+    }
+
+  
   };
-
-  // const dataLicense = await peticionesBack('client/', 'POST', valoresForms)
-  //   console.log(client)
-  // };
-
-  const [clients, setClients] = useState([]);
-
-  const getClients = async () =>{
-    const response = await read();
-    setClients(response);
-  };
-
-  useEffect(()=> {
-    getClients();
-  }, []);
-
-
-  // const handleSubmit = async (e) => {
-    //   e.preventDefault();
-    //   const response = await peticionesBack(inputValue, 'GET', {});
-    //   const data = await response.json();
-    //   console.log(data);
-    //   }
-    
 
   return (
     <div className="flex justify-center mt-24 ">
-<div className="w-[40vh] md:w-[60vh] px-8 rounded-3xl shadow-xl border-2 border-cyan-100  py-3 md:py-0
-bg-white
-">
+      <div
+        className="w-[40vh] md:w-[60vh] px-8 rounded-3xl shadow-xl border-2 border-cyan-100  py-3 md:py-0
+        bg-white
+        "
+      >
         <h2 className="text-2xl font-bold text-center my-2 bg-gradient-to-r from-indigo-600 to-cyan-400 bg-clip-text text-transparent">
-        Consulta Autopower
-      </h2>
+          Consulta Placa Autopower
+        </h2>
 
-      <div className="py-2">
-        <TextField
-          type="text"
-          name="placa"
-          placeholder="Placa"
-          className="w-full text-xl tracking-widest uppercase "
-          required
-          maxLength={6}
-          // onChange={handleSubmit}
-        />
-      </div>
+        <form onSubmit={handleFormSubmit} className="py-2 flex flex-col items-center">
+          <TextField
+            maxLength={6}
+            className="w-full text-xl tracking-widest uppercase "
+            placeholder="Ejem: ABC123"
+            type="text"
+            name="placa"
+            value={values.placa}
+            onChange={handleInputChange}
+            required={false}
+            errors={errors}
+          />
+          
 
-        {clients.length > 0 && clients.map((client) => <Client key={client.license_plate} text={client.license_plate} />)}
-
-      <div className="py-2">
-        <div className="text-center pt-6">
           <Button
             type="submit"
             text="Buscar"
             variant="primary"
             disabled={false}
-            handleButtonClick={handleButtonClick}
+            
+            className="text-center py-2 mt-6  "
           />
-        </div>
+        </form>
       </div>
-</div>
-</div>
+    </div>
   );
 }
-
-  // return (
-  //     <form onSubmit={handleSubmit}>
-  //         <input 
-  //             type="text" 
-  //             value={inputValue} 
-  //             onChange={(e) => setInputValue(e.target.value)} 
-  //         />
-  //         <button type="submit">Enviar</button>
-  //     </form>
-  // );

@@ -3,7 +3,6 @@ import { initMercadoPago, CardPayment } from '@mercadopago/sdk-react';
 
 initMercadoPago(import.meta.env.VITE_MERCADOPAGO_PUBLIC_KEY, {locale: 'es-PE'})
 
-console.log(initMercadoPago)
 
 export default function ContainerData({setActiveStep}) {
 
@@ -16,7 +15,7 @@ export default function ContainerData({setActiveStep}) {
     }
 
     const handleFormSubmit = async(formData) => {
-        console.log(formData);
+       
         setActiveStep(3);
     };
 
