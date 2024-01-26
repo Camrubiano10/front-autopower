@@ -11,7 +11,7 @@ export default function SwiperBasic({ pryceForm }) {
     }
     return (
 
-        <div className="min-w-[60%] w-[90%] md:w-[93%]  md:h-[383px] rounded-xl md:rounded-none mx-auto md:flex md:justify-between "> 
+        <div className="md:min-w-[60%]  md:w-[93%]  md:h-[383px] rounded-xl md:rounded-none mx-auto flex justify-between flex-col md:flex-row "> 
 
             <div className="flex flex-col w-full md:w-[46%]  my-4  ">
 
@@ -23,8 +23,8 @@ export default function SwiperBasic({ pryceForm }) {
                 </h2>
             </div>
 
-            <div className="my-4 text-center md:text-right md:mr-15 rounded-r-lg 
-            bg-gradient-to-l from-blue-400 to-slate-50  w-3/4
+            <div className="  md:mt-4 mb-4 text-center md:text-right md:mr-15 rounded-r-lg 
+            bg-gradient-to-l from-blue-400 to-slate-50  md:w-3/4
             ">
 
                 <h2 className="
@@ -35,7 +35,8 @@ export default function SwiperBasic({ pryceForm }) {
                 </h2>
 
 
-                <div className="w-[80%] mx-auto mr-4  flex flex-col ">
+                <div className="text-right  md:w-[80%] mx-auto mr-4 mt-4 md:mt-0  flex flex-col ">
+                    
                     <p className=" flex justify-center text-xs md:text-xl italic ">
                         Desde
                     </p>
@@ -45,12 +46,12 @@ export default function SwiperBasic({ pryceForm }) {
                 </div>
 
                 <div className="flex ">
-                <div className="w-3/4"> 
+                <div className="w-1/4 md:w-3/4"> 
                     
                     <h2></h2>
                 </div>
 
-                <div className=" text-sm md:text-lg text-right text-wrap pr-6 ">
+                <div className=" text-sm md:text-lg text-right text-wrap pr-6 mt-8 md:mt-0">
                 <p>◽ Evite las preocupaciones con nuestra asistencia 24 h.</p>
 
                 <p className="mt-4">◽ Revisión técnica mensualmente para la seguridad de su auto y el suyo.</p>

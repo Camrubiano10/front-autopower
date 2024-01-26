@@ -49,7 +49,7 @@ export default function Home() {
           className="text-lg md:text-4xl text-center mt-8 md:mt-12 mb-4 font-bold tracking-wider px-20
           bg-gradient-to-r from-cyan-800 to-teal-100 bg-clip-text text-transparent  "
         >
-          Conoce nuestros planes:
+          Nuestros beneficios:
         </h2>
         <PlanTable  />
         <ButtonHome />

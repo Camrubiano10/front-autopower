@@ -12,7 +12,7 @@ export default function SwiperGold({ pryceForm }) {
 
     return (
 
-        <div className="min-w-[60%] w-[90%] md:w-[100%] md:h-[383px] rounded-xl md:rounded-none  md:flex md:justify-center">
+        <div className="md:min-w-[60%]  md:w-[100%] md:h-[383px] flex flex-col md:flex-row md:justify-center">
             
             <div className="flex flex-col w-full md:w-[43%]  my-4  ">
 
@@ -25,8 +25,8 @@ export default function SwiperGold({ pryceForm }) {
 
             </div>
 
-            <div className="my-4 text-center md:text-right md:mr-15 rounded-r-lg 
-            bg-gradient-to-l from-cyan-800 to-slate-50  w-2/4   
+            <div className="md:mt-4 mb-4 text-center md:text-right md:mr-15 rounded-r-lg 
+            bg-gradient-to-l from-cyan-800 to-slate-50  md:w-2/4   
             ">
 
                 <h2 className="font-bold text-sm md:text-base tracking-wider text-right pr-6 md:mt-2
@@ -36,7 +36,7 @@ export default function SwiperGold({ pryceForm }) {
                 </h2>
 
 
-                <div className="w-[80%] mx-auto mr-4  flex flex-col ">
+                <div className="text-right w-[80%] mx-auto mr-4  flex flex-col mt-4 md:mt-0  ">
                     <p className=" flex justify-center text-xs md:text-xl italic text-white">
                         Desde
                     </p>
@@ -50,7 +50,7 @@ export default function SwiperGold({ pryceForm }) {
                     
                     <h2></h2>
                 </div>
-                <div className=" text-sm md:text-lg text-right text-wrap pr-6">
+                <div className=" text-sm md:text-lg text-right text-wrap pr-6 mt-8 md:mt-0">
                 <p>◽ Protege tu vehiculo electrico con los mejores.</p>
                 <p className="mt-4">◽ Contamos con todos los complementos para tu auto.</p>
                 </div>
