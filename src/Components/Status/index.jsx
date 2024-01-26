@@ -21,9 +21,9 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
                         
                     >
                         <Step
-                            className="bg-gray-300 border "
+                            className="bg-gray-300 border cursor-pointer "
                             activeClassName="bg-skyblue"
-                            completedClassName="bg-darkblue-select"
+                            completedClassName="bg-darkblue-select "
                             onClick={() => setActiveStep(0)}
 
                         >
@@ -34,7 +34,7 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
                             className="bg-gray-300 border "
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
-                            onClick={() => setActiveStep(1)}
+                            // onClick={() => setActiveStep(1)}
                             
                         >
                             2
@@ -44,7 +44,7 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
                             className="bg-gray-300 border "
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
-                            onClick={() => setActiveStep(2)}
+                            // onClick={() => setActiveStep(2)}
                             
                         >
                             3
@@ -54,7 +54,7 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
                             className="bg-gray-300 border "
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
-                            onClick={() => setActiveStep(3)}
+                            // onClick={() => setActiveStep(3)}
                             
                         >
                             4

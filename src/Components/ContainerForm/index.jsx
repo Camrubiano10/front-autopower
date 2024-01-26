@@ -1,11 +1,7 @@
-/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Button, FormWindow, Paragraph, OptionPlan } from "../../Components";
 import Swal from "sweetalert2";
 import TextFaild from "../TextField";
-// import { create } from "../../services";
-
-
 
 export default function ContainerForms({ valoresForms, setValoresForms, setActiveStep }) {
 

@@ -4,12 +4,13 @@ import TextField from "../TextField";
 import Button from "../Button";
 import { getClientByLicense } from "../../hooks/useForm"
 import { useClientStore } from "../../store/storeLicense"
+import Swal from "sweetalert2";
 
 export default function ContainerLogin() {
   const navigate = useNavigate();
   const {setData} = useClientStore();
 
-  const { errors, values, handleInputChange, validateIfValuesHasEmpty } = useForm();
+  const { errors, values, handleInputChange,  validateIfValuesHasEmpty } = useForm();
   
   const handleFormSubmit = async (e) => {
     e.preventDefault();
@@ -19,7 +20,11 @@ export default function ContainerLogin() {
       navigate("/profile");
 
     }catch(error){
-
+      Swal.fire(
+        "Atención",
+        "No cuentas con un seguro activo",
+        "warning"
+      );
     }
 
   

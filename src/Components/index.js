@@ -4,7 +4,7 @@ export {default as ContainerPayment} from "./ContainerPayment";
 export {default as ContainerForm} from "./ContainerForm";
 export {default as ContainerBill} from "./ContainerBill";
 export {default as Contrat} from "./Contract"
-export {default as ContainerLogin} from "./ContainerLogin"
+export {default as ContainerLogin} from "./ContainerPlaca"
 export {default as ContainerProfile} from "./ContainerProfile"
 export {default as FormWindow} from "./FormWindow"
 export {default as Layout} from "./Layout";

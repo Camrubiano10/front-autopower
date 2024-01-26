@@ -28,35 +28,11 @@ export function useForm(){
         setErrors(Object.fromEntries(empties));
     };
 
-    // const fetchData = async (placa) => {
-    //     const response = await fetch(`http://127.0.0.1:8000/api/v1/client/${placa}/`);
-    //     const data = await response.json();
-    
-    //     const newValues = {
-    //         license_plate: data.license_plate,
-    //         name: data.name,
-    //         lastname: data.lastname,
-    //         document_number: data.document_number,
-    //         document_type: data.document_type,
-    //         country: data.country,
-    //         phone: data.phone,
-    //         email: data.email,
-    //         car_type: data.car_type,
-    //         service: data.service,
-    //         created_at: data.created_at,
-    //     };
-    
-    //     useStore.getState().setData(newValues);
-        
-    // };
-
-
     return{
         values,
         errors,
         handleInputChange,
         validateIfValuesHasEmpty,
-        
     };
 
 }

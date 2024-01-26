@@ -5,10 +5,9 @@ import { useClientStore } from "../../store/storeLicense";
 export default function ContainerProfile() {
 
     const {data} = useClientStore();
-    console.log(data);
-
-    if(data.name === 0 ) {
-        return <Navigate to="/login" />
+    
+    if(data.name.length === 0 ) {
+        return <Navigate to="/consulta-placa" />
     }
     
     return (
@@ -77,12 +76,12 @@ export default function ContainerProfile() {
             <p>Vigencia desde:</p>
         </div>
         <div className="border-cyan-500 py-2 md:py-1 font-normal md:font-semibold text-center md:text-start">
-            <p>{data.created_at}</p>
+            <p className="">{data.created_at}</p>
         </div>
         </div>
 
         <div className="w-full text-center my-4 md:my-2 animate-pulse">
-        <Link to={"/login"}>
+        <Link to={"/consulta-placa"}>
             <Button
             type="submit"
             text="Volver"
