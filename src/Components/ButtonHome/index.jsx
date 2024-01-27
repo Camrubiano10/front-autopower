@@ -25,7 +25,7 @@ export default function ButtonHome(){
         cursor-pointer 
         "
         >
-        >>> Descubre más de nuestros beneficios
+        Descubre más de nuestros beneficios
         </h2>
         </Link>
 

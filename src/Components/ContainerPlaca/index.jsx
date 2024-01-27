@@ -15,7 +15,7 @@ export default function ContainerLogin() {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try{
-      const data = await getClientByLicense(values.placa);
+      const data = await getClientByLicense(values.placa.toLowerCase());
       setData(data);
       navigate("/profile");
 

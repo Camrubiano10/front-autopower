@@ -33,7 +33,7 @@ export default function ContainerForms({ valoresForms, setValoresForms, setActiv
     setMensaje(false);
     setValoresForms({
       ...valoresForms,
-      [target.name]: target.value,
+      [target.name]: target.value.toLowerCase(),
     });
   };
 

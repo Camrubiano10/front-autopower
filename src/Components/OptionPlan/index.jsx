@@ -26,9 +26,9 @@ return (
     <FormLabel  id="radio-buttons">Seleccione su plan:</FormLabel>
     <RadioGroup row aria-labelledby="radio-buttons"
     onChange={handleActualizarInputs} value={service} name="service">
-        <FormControlLabel onClick={handleButtonClick1} value="Basic" control={<Radio />} label="Plan Basic" />
-        <FormControlLabel onClick={handleButtonClick2} value="Gold" control={<Radio />} label="Plan Gold" />
-        <FormControlLabel onClick={handleButtonClick3} value="Platinum" control={<Radio />} label="Plan Platinum" />
+        <FormControlLabel onClick={handleButtonClick1} value="basic" control={<Radio />} label="Plan Basic" />
+        <FormControlLabel onClick={handleButtonClick2} value="gold" control={<Radio />} label="Plan Gold" />
+        <FormControlLabel onClick={handleButtonClick3} value="platinum" control={<Radio />} label="Plan Platinum" />
         
     </RadioGroup>
     </FormControl>
