@@ -22,10 +22,10 @@ export default function ButtonHome(){
         <h2
         className="text-lg lg:text-2xl text-center mb-4 md:mb-12 font-bold tracking-widest px-20 
         bg-gradient-to-l from-indigo-400 to-cyan-400 bg-clip-text text-transparent md:mt-12
-        cursor-pointer 
+        cursor-pointer animate-pulse
         "
         >
-        Descubre más de nuestros beneficios
+        👉🏻 Descubre más de nuestros beneficios 👈🏻
         </h2>
         </Link>
 
